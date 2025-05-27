@@ -1,0 +1,323 @@
+# Mac M3 Optimized Configuration for Saorse
+# This configuration is optimized for Apple Silicon M3 performance
+
+# Inherit from default configuration
+_inherit: "default.yaml"
+
+system:
+  # Use Metal Performance Shaders for AI acceleration
+  device: "mps"
+  
+  # M3 specific optimizations
+  log_level: "INFO"
+  
+  # Higher performance thresholds for M3
+  max_cpu_percent: 85.0
+  max_memory_percent: 90.0
+  
+  # Enable M3 specific features
+  metal_performance_shaders: true
+  unified_memory_optimization: true
+
+# Optimized audio settings for M3
+audio:
+  # Use Core Audio optimizations
+  sample_rate: 16000
+  chunk_duration: 0.4  # Slightly smaller chunks for lower latency
+  channels: 1
+  dtype: "float32"
+  
+  # M3 can handle more aggressive VAD
+  vad_aggressiveness: 3
+  silence_timeout: 1.8
+  min_speech_duration: 0.4
+  
+  # Enable macOS specific audio features
+  core_audio_optimizations: true
+  low_latency_mode: true
+
+# Whisper optimizations for M3
+whisper:
+  # Use larger model for better accuracy on M3
+  model_size: "small"  # M3 can handle small model efficiently
+  language: "en"
+  task: "transcribe"
+  
+  # Disable fp16 for MPS compatibility
+  fp16: false
+  
+  # Enable M3 specific optimizations
+  mps_optimization: true
+  batch_size: 1
+  
+  # Faster model loading
+  model_dir: "models/"
+  cache_models: true
+
+# Enhanced robot configuration for M3 performance
+robot:
+  baudrate: 1000000
+  timeout: 3.0  # Faster timeout
+  protocol_version: 2.0
+  
+  # Tighter workspace for precise control
+  workspace_limits:
+    x: [-250, 250]
+    y: [-250, 250]
+    z: [10, 350]
+    
+  # Optimized motor settings
+  motors:
+    - id: 1
+      name: "base"
+      model: "XM430-W350"
+      min_position: 0
+      max_position: 4095
+      home_position: 2048
+      max_velocity: 50  # Higher velocity for M3
+      
+    - id: 2
+      name: "shoulder"
+      model: "XM430-W350"
+      min_position: 512
+      max_position: 3584
+      home_position: 1024
+      max_velocity: 45
+      
+    - id: 3
+      name: "elbow"
+      model: "XM430-W350"
+      min_position: 512
+      max_position: 3584
+      home_position: 3072
+      max_velocity: 60
+      
+    - id: 4
+      name: "wrist1"
+      model: "XM430-W350"
+      min_position: 0
+      max_position: 4095
+      home_position: 2048
+      max_velocity: 80
+      
+    - id: 5
+      name: "wrist2"
+      model: "XM430-W350"
+      min_position: 0
+      max_position: 4095
+      home_position: 1024
+      max_velocity: 80
+      
+    - id: 6
+      name: "gripper"
+      model: "XM430-W350"
+      min_position: 1024
+      max_position: 3072
+      home_position: 2048
+      max_velocity: 100
+
+# Optimized safety settings for M3 performance
+safety:
+  # Higher velocity limits due to M3 processing power
+  max_velocity: 40.0
+  max_acceleration: 120.0
+  
+  # Standard temperature limits
+  max_temperature: 70.0
+  warning_temperature: 60.0
+  
+  # Higher current limits for performance
+  max_current: 600.0
+  warning_current: 450.0
+  
+  min_voltage: 11.0
+  workspace_buffer: 8.0  # Tighter buffer for precision
+  
+  emergency_words:
+    - "stop"
+    - "halt"
+    - "emergency"
+    - "cease"
+    - "freeze"
+    - "abort"
+    
+  collision_force_threshold: 40.0  # More sensitive
+  monitoring_rate: 20.0  # Higher monitoring rate
+
+# Performance monitoring optimized for M3
+performance:
+  monitoring_interval: 0.5  # Higher resolution monitoring
+  
+  # M3 specific thresholds
+  thresholds:
+    cpu_warning: 85.0
+    cpu_critical: 95.0
+    memory_warning: 85.0
+    memory_critical: 95.0
+    inference_warning_ms: 150.0   # M3 is faster
+    inference_critical_ms: 300.0  # M3 is faster
+    audio_latency_warning_ms: 80.0     # Lower latency expected
+    audio_latency_critical_ms: 200.0   # Lower latency expected
+    robot_response_warning_ms: 150.0   # Faster response expected
+    robot_response_critical_ms: 500.0  # Faster response expected
+    temperature_warning: 65.0     # M3 runs cooler
+    temperature_critical: 80.0    # M3 runs cooler
+    
+  export_enabled: true
+  export_interval: 180.0  # More frequent exports
+  export_path: "logs/m3_metrics.json"
+  
+  # Enable M3 specific monitoring
+  monitor_neural_engine: true
+  monitor_unified_memory: true
+  monitor_gpu_utilization: true
+
+# Command processing optimized for M3
+commands:
+  default_step_size: 8.0  # Smaller steps for precision
+  
+  speed_levels:
+    slow: 0.4
+    normal: 1.0
+    fast: 2.5
+    very_fast: 4.0  # M3 can handle higher speeds
+    
+  gripper_positions:
+    closed: 5
+    slightly_open: 25
+    half_open: 50
+    mostly_open: 75
+    fully_open: 95
+    
+  command_timeout: 20.0  # Faster timeout
+  
+  # Enable AI commands on M3 (Phase 2)
+  ai_commands_enabled: true
+  ai_processing_timeout: 2.0
+
+# M3-Optimized AI Configuration (Phase 2)
+ai:
+  # Use faster model for M3
+  default_model: "HuggingFaceTB/SmolLM2-360M-Instruct"
+  
+  # M3-optimized model selection
+  available_models:
+    - "HuggingFaceTB/SmolLM2-135M-Instruct"   # Ultra-fast for M3
+    - "HuggingFaceTB/SmolLM2-360M-Instruct"   # Recommended for M3
+    - "HuggingFaceTB/SmolLM2-1.7B-Instruct"   # Larger model if needed
+    - "Qwen/Qwen2.5-1.5B-Instruct"           # Alternative option
+    
+  # M3-specific optimizations
+  optimization:
+    profile: "speed"         # M3 can handle speed optimizations
+    enable_mps: true         # Essential for M3
+    precision: "fp16"        # M3 excels at FP16
+    compile_model: true      # Enable PyTorch 2.0 compilation
+    use_unified_memory: true # Leverage M3's unified memory
+    enable_channels_last: true
+    
+  # Faster inference settings for M3
+  inference:
+    max_new_tokens: 96       # Shorter for real-time performance
+    temperature: 0.6         # Slightly more focused
+    top_p: 0.85
+    do_sample: true
+    timeout: 3.0             # Faster timeout for M3
+    
+  # Enhanced context for M3 performance
+  context:
+    max_history_length: 15   # M3 can handle more context
+    enable_reference_resolution: true
+    enable_spatial_reasoning: true
+    enable_temporal_reasoning: true
+    
+  # Advanced planning for M3
+  planning:
+    enable_multi_step_tasks: true
+    max_task_steps: 25       # M3 can handle more complex plans
+    step_timeout: 20.0       # Faster timeouts
+    enable_replanning: true
+    enable_parallel_planning: true
+
+# M3 specific camera configuration
+camera:
+  enabled: true
+  
+  # Higher resolution for M3
+  width: 1280
+  height: 720
+  fps: 30
+  
+  # Enable Continuity Camera
+  continuity_camera: true
+  
+  # Object detection optimized for M3
+  detection_enabled: true
+  confidence_threshold: 0.6
+  detection_model: "yolov8n"  # Nano model for speed
+  
+  # M3 specific camera features
+  neural_engine_acceleration: true
+  core_ml_optimization: true
+
+# Enhanced logging for development
+logging:
+  max_file_size: "100MB"
+  backup_count: 10
+  
+  levels:
+    root: "INFO"
+    saorse.audio: "DEBUG"  # More detailed audio logging
+    saorse.robot: "INFO"
+    saorse.safety: "INFO"
+    saorse.performance: "INFO"
+    saorse.m3: "DEBUG"     # M3 specific logging
+    
+  console_output: true
+  format: "%(asctime)s - %(name)s - %(levelname)s - [M3] %(message)s"
+  
+  # Enable performance logging
+  performance_logging: true
+  profile_functions: true
+
+# M3 Hardware specific settings
+hardware:
+  # CPU configuration
+  cpu_cores: 8  # M3 has 8 cores
+  performance_cores: 4
+  efficiency_cores: 4
+  
+  # Memory configuration  
+  unified_memory: true
+  memory_bandwidth: "100GB/s"
+  
+  # Neural Engine
+  neural_engine_enabled: true
+  neural_engine_tops: 18  # M3 Neural Engine
+  
+  # GPU configuration
+  gpu_cores: 10  # M3 has 10 GPU cores
+  metal_support: true
+  
+  # Power management
+  thermal_management: true
+  dynamic_frequency_scaling: true
+  
+# Development and debugging settings
+development:
+  # Enable debug features
+  debug_mode: false
+  
+  # Profiling
+  enable_profiling: false
+  profile_output: "logs/profile.json"
+  
+  # Testing
+  mock_robot: false  # Use real robot
+  mock_audio: false  # Use real audio
+  
+  # Simulation
+  simulation_mode: false
+  
+  # Hot reload for development
+  hot_reload: false

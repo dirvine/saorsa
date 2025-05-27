@@ -1,0 +1,288 @@
+# Default Configuration for Saorse Robot Control System
+# This file contains the base configuration settings for all components
+
+system:
+  # Compute device for AI models (mps for Mac M3, cuda for NVIDIA, cpu for fallback)
+  device: "mps"
+  
+  # Logging configuration
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_file: "logs/saorse.log"
+  
+  # Performance settings
+  max_cpu_percent: 80.0
+  max_memory_percent: 85.0
+
+# Audio input configuration
+audio:
+  # Sample rate for audio capture (16kHz recommended for Whisper)
+  sample_rate: 16000
+  
+  # Audio chunk duration in seconds
+  chunk_duration: 0.5
+  
+  # Number of audio channels (1 for mono, 2 for stereo)
+  channels: 1
+  
+  # Audio data type
+  dtype: "float32"
+  
+  # Wake word to activate voice commands
+  wake_word: "robot"
+  
+  # Voice Activity Detection settings
+  vad_aggressiveness: 2  # 0-3, higher = more aggressive
+  silence_timeout: 2.0   # seconds of silence before processing
+  min_speech_duration: 0.5  # minimum speech length to process
+
+# Whisper speech recognition configuration
+whisper:
+  # Model size: tiny, base, small, medium, large
+  # Larger models are more accurate but slower
+  model_size: "base"
+  
+  # Language code (en, es, fr, etc.)
+  language: "en"
+  
+  # Task type: transcribe or translate
+  task: "transcribe"
+  
+  # Use fp16 precision (faster but less accurate)
+  fp16: false
+  
+  # Model download directory
+  model_dir: "models/"
+
+# Robot arm configuration
+robot:
+  # Serial communication settings
+  baudrate: 1000000
+  timeout: 5.0
+  
+  # Dynamixel protocol version
+  protocol_version: 2.0
+  
+  # Workspace limits in millimeters
+  workspace_limits:
+    x: [-300, 300]    # left/right
+    y: [-300, 300]    # forward/back  
+    z: [0, 400]       # up/down
+    
+  # Default motor configuration for SO-101
+  motors:
+    - id: 1
+      name: "base"
+      model: "XM430-W350"
+      min_position: 0
+      max_position: 4095
+      home_position: 2048
+      
+    - id: 2  
+      name: "shoulder"
+      model: "XM430-W350"
+      min_position: 0
+      max_position: 4095
+      home_position: 1024
+      
+    - id: 3
+      name: "elbow" 
+      model: "XM430-W350"
+      min_position: 0
+      max_position: 4095
+      home_position: 3072
+      
+    - id: 4
+      name: "wrist1"
+      model: "XM430-W350" 
+      min_position: 0
+      max_position: 4095
+      home_position: 2048
+      
+    - id: 5
+      name: "wrist2"
+      model: "XM430-W350"
+      min_position: 0
+      max_position: 4095
+      home_position: 1024
+      
+    - id: 6
+      name: "gripper"
+      model: "XM430-W350"
+      min_position: 0
+      max_position: 4095
+      home_position: 2048
+
+# Safety monitoring configuration  
+safety:
+  # Maximum allowed motor velocity (degrees/second)
+  max_velocity: 30.0
+  
+  # Maximum allowed acceleration (degrees/second²)
+  max_acceleration: 100.0
+  
+  # Temperature thresholds (Celsius)
+  max_temperature: 70.0
+  warning_temperature: 60.0
+  
+  # Current thresholds (milliamps)
+  max_current: 500.0
+  warning_current: 400.0
+  
+  # Minimum voltage threshold (volts)
+  min_voltage: 11.0
+  
+  # Workspace buffer zone (millimeters)
+  workspace_buffer: 10.0
+  
+  # Emergency stop trigger words
+  emergency_words:
+    - "stop"
+    - "halt" 
+    - "emergency"
+    - "cease"
+    - "freeze"
+    
+  # Collision detection threshold (Newtons)
+  collision_force_threshold: 50.0
+  
+  # Safety monitoring update rate (Hz)
+  monitoring_rate: 10.0
+
+# Performance monitoring configuration
+performance:
+  # Monitoring update interval (seconds)
+  monitoring_interval: 1.0
+  
+  # Performance warning thresholds
+  thresholds:
+    cpu_warning: 80.0      # percent
+    cpu_critical: 95.0     # percent
+    memory_warning: 80.0   # percent  
+    memory_critical: 95.0  # percent
+    inference_warning_ms: 200.0    # milliseconds
+    inference_critical_ms: 500.0   # milliseconds
+    audio_latency_warning_ms: 100.0    # milliseconds
+    audio_latency_critical_ms: 300.0   # milliseconds
+    robot_response_warning_ms: 200.0   # milliseconds
+    robot_response_critical_ms: 1000.0 # milliseconds
+    temperature_warning: 70.0      # Celsius
+    temperature_critical: 85.0     # Celsius
+    
+  # Export metrics to file
+  export_enabled: true
+  export_interval: 300.0  # seconds (5 minutes)
+  export_path: "logs/metrics.json"
+
+# Command processing configuration
+commands:
+  # Default movement step size (degrees)
+  default_step_size: 10.0
+  
+  # Movement speed multipliers
+  speed_levels:
+    slow: 0.3
+    normal: 1.0
+    fast: 2.0
+    very_fast: 3.0
+    
+  # Gripper positions (0-100)
+  gripper_positions:
+    closed: 0
+    slightly_open: 25
+    half_open: 50
+    mostly_open: 75
+    fully_open: 100
+    
+  # Timeout for command execution (seconds)
+  command_timeout: 30.0
+  
+  # Enable AI-powered command interpretation (Phase 2)
+  ai_commands_enabled: true
+  
+# AI Model Configuration (Phase 2)
+ai:
+  # Default AI model for command processing
+  default_model: "HuggingFaceTB/SmolLM2-360M-Instruct"
+  
+  # Available models (will be downloaded as needed)
+  available_models:
+    - "HuggingFaceTB/SmolLM2-135M-Instruct"
+    - "HuggingFaceTB/SmolLM2-360M-Instruct" 
+    - "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+    - "Qwen/Qwen2.5-1.5B-Instruct"
+    - "microsoft/Phi-3-mini-4k-instruct"
+    - "google/gemma-2-2b-it"
+    
+  # Model optimization settings
+  optimization:
+    profile: "balanced"  # speed, memory, balanced, quality
+    enable_mps: true     # Use Metal Performance Shaders on Mac
+    precision: "fp16"    # fp32, fp16, int8
+    compile_model: true  # Enable PyTorch compilation
+    
+  # Inference settings
+  inference:
+    max_new_tokens: 128
+    temperature: 0.7
+    top_p: 0.9
+    do_sample: true
+    timeout: 5.0
+    
+  # Context management
+  context:
+    max_history_length: 10
+    enable_reference_resolution: true
+    enable_spatial_reasoning: true
+    
+  # Task planning
+  planning:
+    enable_multi_step_tasks: true
+    max_task_steps: 20
+    step_timeout: 30.0
+    enable_replanning: true
+
+# Camera configuration (Phase 3)
+camera:
+  enabled: false
+  
+  # Camera resolution
+  width: 640
+  height: 480
+  fps: 30
+  
+  # Enable iPhone Continuity Camera
+  continuity_camera: false
+  
+  # Object detection settings
+  detection_enabled: false
+  confidence_threshold: 0.5
+
+# Network configuration (future features)
+network:
+  # Enable remote control interface
+  remote_enabled: false
+  port: 8080
+  
+  # Enable telemetry streaming
+  telemetry_enabled: false
+  telemetry_port: 8081
+
+# Logging configuration
+logging:
+  # Log file rotation
+  max_file_size: "50MB"
+  backup_count: 5
+  
+  # Log levels for different modules
+  levels:
+    root: "INFO"
+    saorse.audio: "INFO" 
+    saorse.robot: "INFO"
+    saorse.safety: "WARNING"
+    saorse.performance: "WARNING"
+    
+  # Enable console output
+  console_output: true
+  
+  # Log format
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

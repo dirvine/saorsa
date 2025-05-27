@@ -1,0 +1,469 @@
+# Voice Commands Configuration for Saorse
+# This file defines the mapping between voice commands and robot actions
+
+# Basic movement commands
+movement:
+  # Directional movements with joint mappings
+  directional:
+    "move left":
+      action: "move_relative"
+      parameters:
+        joint1: -10  # Base rotation
+      description: "Rotate base counter-clockwise"
+      
+    "move right": 
+      action: "move_relative"
+      parameters:
+        joint1: 10   # Base rotation
+      description: "Rotate base clockwise"
+      
+    "move forward":
+      action: "move_relative" 
+      parameters:
+        joint2: -10  # Shoulder forward
+      description: "Move arm forward"
+      
+    "move back":
+      action: "move_relative"
+      parameters:
+        joint2: 10   # Shoulder back
+      description: "Move arm backward"
+      
+    "move backward":
+      action: "move_relative"
+      parameters:
+        joint2: 10
+      description: "Move arm backward (alternative)"
+      
+    "move up":
+      action: "move_relative"
+      parameters:
+        joint3: 10   # Elbow up
+      description: "Move arm upward"
+      
+    "move down":
+      action: "move_relative" 
+      parameters:
+        joint3: -10  # Elbow down
+      description: "Move arm downward"
+      
+    "turn left":
+      action: "move_relative"
+      parameters:
+        joint6: -15  # Wrist rotation
+      description: "Rotate end effector left"
+      
+    "turn right":
+      action: "move_relative"
+      parameters:
+        joint6: 15   # Wrist rotation  
+      description: "Rotate end effector right"
+
+  # Position commands
+  positions:
+    "home":
+      action: "move_home"
+      parameters: {}
+      description: "Move to home position"
+      
+    "home position":
+      action: "move_home" 
+      parameters: {}
+      description: "Move to home position"
+      
+    "ready":
+      action: "move_ready"
+      parameters: {}
+      description: "Move to ready position"
+      
+    "ready position":
+      action: "move_ready"
+      parameters: {}
+      description: "Move to ready position"
+      
+    "rest":
+      action: "move_rest"
+      parameters: {}
+      description: "Move to rest position"
+      
+    "rest position":
+      action: "move_rest"
+      parameters: {}
+      description: "Move to rest position"
+
+# Gripper control commands
+gripper:
+  basic:
+    "open gripper":
+      action: "set_gripper"
+      parameters:
+        value: 100
+      description: "Fully open gripper"
+      
+    "close gripper":
+      action: "set_gripper"
+      parameters:
+        value: 0
+      description: "Fully close gripper"
+      
+    "open":
+      action: "set_gripper"
+      parameters:
+        value: 100
+      description: "Open gripper (short form)"
+      
+    "close":
+      action: "set_gripper"
+      parameters:
+        value: 0
+      description: "Close gripper (short form)"
+      
+    "grab":
+      action: "set_gripper"
+      parameters:
+        value: 0
+      description: "Grab object (close gripper)"
+      
+    "release":
+      action: "set_gripper"
+      parameters:
+        value: 100
+      description: "Release object (open gripper)"
+      
+    "let go":
+      action: "set_gripper"
+      parameters:
+        value: 100
+      description: "Let go of object"
+      
+    "hold":
+      action: "set_gripper"
+      parameters:
+        value: 30
+      description: "Hold with light grip"
+
+  # Graduated gripper positions
+  positions:
+    "slightly open":
+      action: "set_gripper"
+      parameters:
+        value: 25
+      description: "Open gripper slightly"
+      
+    "half open":
+      action: "set_gripper"
+      parameters:
+        value: 50
+      description: "Open gripper halfway"
+      
+    "mostly open":
+      action: "set_gripper"
+      parameters:
+        value: 75
+      description: "Open gripper most of the way"
+
+# Speed and precision control
+speed:
+  modifiers:
+    "slower":
+      action: "set_speed"
+      parameters:
+        multiplier: 0.5
+      description: "Reduce movement speed"
+      
+    "faster":
+      action: "set_speed"
+      parameters:
+        multiplier: 2.0
+      description: "Increase movement speed"
+      
+    "slow":
+      action: "set_speed"
+      parameters:
+        multiplier: 0.3
+      description: "Set slow movement speed"
+      
+    "fast":
+      action: "set_speed"
+      parameters:
+        multiplier: 3.0
+      description: "Set fast movement speed"
+      
+    "normal speed":
+      action: "set_speed"
+      parameters:
+        multiplier: 1.0
+      description: "Set normal movement speed"
+
+  precision:
+    "precise":
+      action: "set_precision"
+      parameters:
+        level: "high"
+      description: "Enable high precision mode"
+      
+    "coarse":
+      action: "set_precision"
+      parameters:
+        level: "low"
+      description: "Enable coarse movement mode"
+
+# Safety and control commands
+safety:
+  emergency:
+    "stop":
+      action: "stop_movement"
+      parameters: {}
+      description: "Stop current movement"
+      priority: "high"
+      
+    "halt":
+      action: "emergency_stop"
+      parameters: {}
+      description: "Emergency stop all motors"
+      priority: "emergency"
+      
+    "emergency":
+      action: "emergency_stop"
+      parameters: {}
+      description: "Emergency stop"
+      priority: "emergency"
+      
+    "emergency stop":
+      action: "emergency_stop"
+      parameters: {}
+      description: "Emergency stop all movement"
+      priority: "emergency"
+      
+    "freeze":
+      action: "emergency_stop"
+      parameters: {}
+      description: "Freeze all movement"
+      priority: "emergency"
+      
+    "abort":
+      action: "emergency_stop"
+      parameters: {}
+      description: "Abort current operation"
+      priority: "emergency"
+
+  reset:
+    "reset":
+      action: "reset_emergency"
+      parameters: {}
+      description: "Reset emergency stop"
+      
+    "continue":
+      action: "reset_emergency"
+      parameters: {}
+      description: "Continue after emergency stop"
+
+# System commands
+system:
+  status:
+    "status":
+      action: "get_status"
+      parameters: {}
+      description: "Get robot status"
+      
+    "where am i":
+      action: "get_position"
+      parameters: {}
+      description: "Get current position"
+      
+    "what is my position":
+      action: "get_position"
+      parameters: {}
+      description: "Get current joint positions"
+
+  calibration:
+    "calibrate":
+      action: "start_calibration"
+      parameters: {}
+      description: "Start calibration sequence"
+      
+    "zero":
+      action: "zero_position"
+      parameters: {}
+      description: "Zero current position"
+
+# Complex action sequences (Phase 2)
+sequences:
+  pick_and_place:
+    "pick up":
+      action: "sequence_pick_up"
+      parameters:
+        approach_height: 50
+        grip_force: 30
+      description: "Execute pick up sequence"
+      
+    "put down":
+      action: "sequence_put_down"
+      parameters:
+        approach_height: 50
+        release_delay: 1.0
+      description: "Execute put down sequence"
+      
+    "place":
+      action: "sequence_place"
+      parameters:
+        approach_height: 30
+      description: "Place object gently"
+
+  demonstrations:
+    "demonstrate":
+      action: "start_demonstration"
+      parameters: {}
+      description: "Start demonstration recording"
+      
+    "replay":
+      action: "replay_demonstration"
+      parameters: {}
+      description: "Replay last demonstration"
+
+# AI-powered commands (Phase 2) 
+ai_commands:
+  object_specific:
+    patterns:
+      - "pick up the {color} {object}"
+      - "grab the {object} on the {location}"
+      - "move the {object} to {destination}"
+      - "stack the {objects}"
+      - "arrange the {objects} by {criteria}"
+    
+    objects:
+      - "block"
+      - "cube" 
+      - "ball"
+      - "bottle"
+      - "cup"
+      - "tool"
+      
+    colors:
+      - "red"
+      - "blue"
+      - "green"
+      - "yellow"
+      - "black"
+      - "white"
+      
+    locations:
+      - "left"
+      - "right"
+      - "table"
+      - "desk"
+      - "shelf"
+      
+    criteria:
+      - "size"
+      - "color"
+      - "height"
+
+  contextual:
+    patterns:
+      - "put it {location}"
+      - "move it {direction}"
+      - "place it {destination}"
+      - "that one"
+      - "the other one"
+      
+    locations:
+      - "over there"
+      - "here"
+      - "back"
+      - "away"
+      - "closer"
+
+# Voice recognition settings
+recognition:
+  # Wake words that activate the system
+  wake_words:
+    - "robot"
+    - "saorse"
+    - "hey robot"
+    - "computer"
+    
+  # Confidence thresholds
+  confidence:
+    minimum: 0.7
+    high: 0.9
+    
+  # Language settings
+  language: "en-US"
+  
+  # Noise handling
+  noise_suppression: true
+  echo_cancellation: true
+
+# Command processing settings
+processing:
+  # Timeout for command execution
+  timeout: 30.0
+  
+  # Retry settings
+  max_retries: 2
+  retry_delay: 1.0
+  
+  # Confirmation settings
+  require_confirmation:
+    - "emergency_stop"
+    - "start_calibration"
+    - "zero_position"
+    
+  # Command queuing
+  queue_enabled: true
+  max_queue_size: 5
+  
+  # Fuzzy matching for voice recognition errors
+  fuzzy_matching: true
+  similarity_threshold: 0.8
+
+# Feedback and responses
+feedback:
+  # Audio feedback
+  audio_enabled: true
+  audio_volume: 0.7
+  
+  # Visual feedback
+  led_enabled: false  # If robot has LEDs
+  
+  # Verbal confirmation
+  confirm_commands: true
+  
+  # Response phrases
+  confirmations:
+    - "Moving"
+    - "Executing"
+    - "Done"
+    - "Complete"
+    
+  errors:
+    - "Sorry, I didn't understand"
+    - "Command not recognized"
+    - "Unable to execute"
+    - "Safety violation"
+
+# Accessibility features
+accessibility:
+  # Alternative wake words for accessibility
+  alternative_wake_words:
+    - "assist"
+    - "help"
+    
+  # Slower processing for speech difficulties
+  slow_speech_mode: false
+  
+  # Repeat last command
+  repeat_enabled: true
+  repeat_phrases:
+    - "repeat"
+    - "again"
+    - "do that again"
+    
+  # Command shortcuts
+  shortcuts:
+    "one": "home"
+    "two": "ready" 
+    "three": "open gripper"
+    "four": "close gripper"
+    "five": "stop"
