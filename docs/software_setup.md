@@ -34,10 +34,10 @@ python3.11 --version  # Should show 3.11.x or later
 #### Virtual Environment Setup
 ```bash
 # Create virtual environment
-python3.11 -m venv saorse-env
+python3.11 -m venv saorsa-env
 
 # Activate environment
-source saorse-env/bin/activate
+source saorsa-env/bin/activate
 
 # Upgrade pip
 pip install --upgrade pip setuptools wheel
@@ -49,8 +49,8 @@ pip install --upgrade pip setuptools wheel
 
 ```bash
 # Clone repository
-git clone https://github.com/dirvine/saorse.git
-cd saorse
+git clone https://github.com/dirvine/saorsa.git
+cd saorsa
 
 # Run automated installation script
 ./scripts/install_mac.sh
@@ -70,8 +70,8 @@ The automated script will:
 
 #### Step 1: Clone Repository
 ```bash
-git clone https://github.com/dirvine/saorse.git
-cd saorse
+git clone https://github.com/dirvine/saorsa.git
+cd saorsa
 ```
 
 #### Step 2: Create Virtual Environment
@@ -558,8 +558,8 @@ class CustomModelLoader:
 #### Service Configuration
 ```bash
 # Create system service (optional)
-sudo cp configs/saorse.service /Library/LaunchDaemons/
-sudo launchctl load /Library/LaunchDaemons/saorse.service
+sudo cp configs/saorsa.service /Library/LaunchDaemons/
+sudo launchctl load /Library/LaunchDaemons/saorsa.service
 ```
 
 #### Logging Configuration
@@ -570,7 +570,7 @@ logging:
   handlers:
     file:
       class: logging.FileHandler
-      filename: logs/saorse.log
+      filename: logs/saorsa.log
       level: INFO
     console:
       class: logging.StreamHandler

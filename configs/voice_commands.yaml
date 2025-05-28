@@ -379,7 +379,7 @@ recognition:
   # Wake words that activate the system
   wake_words:
     - "robot"
-    - "saorse"
+    - "saorsa"
     - "hey robot"
     - "computer"
     

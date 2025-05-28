@@ -8,14 +8,14 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
 
 setup(
-    name="saorse",
+    name="saorsa",
     version="0.1.0",
     author="David Irvine",
     author_email="david.irvine@maidsafe.net",
     description="Voice-controlled SO-101 robot arms system for Mac M3",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/dirvine/saorse",
+    url="https://github.com/dirvine/saorsa",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[
@@ -43,7 +43,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "saorse=main_mac:main",
+            "saorsa=main_mac:main",
         ],
     },
     include_package_data=True,

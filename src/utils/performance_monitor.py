@@ -575,7 +575,7 @@ async def main():
     monitor.print_performance_table()
     
     # Export metrics
-    monitor.export_metrics("/tmp/saorse_metrics.json")
+    monitor.export_metrics("/tmp/saorsa_metrics.json")
     
     # Stop monitoring
     monitor.stop_monitoring()

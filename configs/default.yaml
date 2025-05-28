@@ -7,7 +7,7 @@ system:
   
   # Logging configuration
   log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
-  log_file: "logs/saorse.log"
+  log_file: "logs/saorsa.log"
   
   # Performance settings
   max_cpu_percent: 80.0
@@ -276,10 +276,10 @@ logging:
   # Log levels for different modules
   levels:
     root: "INFO"
-    saorse.audio: "INFO" 
-    saorse.robot: "INFO"
-    saorse.safety: "WARNING"
-    saorse.performance: "WARNING"
+    saorsa.audio: "INFO" 
+    saorsa.robot: "INFO"
+    saorsa.safety: "WARNING"
+    saorsa.performance: "WARNING"
     
   # Enable console output
   console_output: true

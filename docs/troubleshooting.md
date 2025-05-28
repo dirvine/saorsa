@@ -18,15 +18,15 @@ python src/main_mac.py test-robot --port /dev/tty.usbserial-FT1234
 ### Log Analysis
 ```bash
 # View recent logs
-tail -f logs/saorse.log
+tail -f logs/saorsa.log
 
 # Search for errors
-grep -i error logs/saorse.log | tail -20
+grep -i error logs/saorsa.log | tail -20
 
 # Check specific component logs
-grep -i "audio\|voice\|whisper" logs/saorse.log
-grep -i "camera\|vision\|detection" logs/saorse.log
-grep -i "robot\|motor\|joint" logs/saorse.log
+grep -i "audio\|voice\|whisper" logs/saorsa.log
+grep -i "camera\|vision\|detection" logs/saorsa.log
+grep -i "robot\|motor\|joint" logs/saorsa.log
 ```
 
 ## Installation and Setup Issues
@@ -48,8 +48,8 @@ python --version  # Should be 3.11+
 python3.11 -m pip install -r requirements.txt
 
 # Create clean virtual environment
-python3.11 -m venv saorse-clean
-source saorse-clean/bin/activate
+python3.11 -m venv saorsa-clean
+source saorsa-clean/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -671,7 +671,7 @@ python scripts/track_memory_leaks.py
 #### System Recovery
 ```bash
 # Emergency stop all processes
-pkill -f saorse
+pkill -f saorsa
 pkill -f python
 
 # Reset robot to safe state
@@ -695,7 +695,7 @@ cp -r configs/ configs_backup_$(date +%Y%m%d)/
 git checkout configs/
 
 # Recover from logs
-python scripts/recover_from_logs.py --log-file logs/saorse.log
+python scripts/recover_from_logs.py --log-file logs/saorsa.log
 ```
 
 ## Getting Help
@@ -726,7 +726,7 @@ pip list > python_packages.txt
 python --version > python_version.txt
 
 # Recent logs
-tail -1000 logs/saorse.log > recent_logs.txt
+tail -1000 logs/saorsa.log > recent_logs.txt
 
 # Configuration
 cp -r configs/ config_backup/
@@ -738,7 +738,7 @@ cp -r configs/ config_backup/
 
 1. **Check system requirements**: Ensure macOS 13.0+, Apple Silicon, 16GB+ RAM
 2. **Verify installation**: Run `python src/main_mac.py status`
-3. **Check logs**: Look for recent errors in `logs/saorse.log`
+3. **Check logs**: Look for recent errors in `logs/saorsa.log`
 4. **Try basic test**: Run `python src/main_mac.py test-audio`
 5. **Update software**: Ensure latest version from repository
 

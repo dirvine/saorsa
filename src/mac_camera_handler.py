@@ -618,8 +618,8 @@ async def main():
         
         # Save test frame
         import cv2
-        cv2.imwrite("/tmp/saorse_test_frame.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
-        console.print("[green]✓ Test frame saved to /tmp/saorse_test_frame.jpg[/green]")
+        cv2.imwrite("/tmp/saorsa_test_frame.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+        console.print("[green]✓ Test frame saved to /tmp/saorsa_test_frame.jpg[/green]")
     else:
         console.print("[red]✗ Failed to capture frame[/red]")
         

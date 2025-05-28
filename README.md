@@ -47,8 +47,8 @@ Saorse provides three levels of robot control sophistication:
 
 ```bash
 # Clone the repository
-git clone https://github.com/dirvine/saorse.git
-cd saorse
+git clone https://github.com/dirvine/saorsa.git
+cd saorsa
 
 # Run the automated installation script
 ./scripts/install_mac.sh
@@ -456,7 +456,7 @@ print(f'GPU memory: {torch.mps.current_allocated_memory()/1024**3:.2f} GB')
 ### Project Structure
 
 ```
-saorse/
+saorsa/
 ├── src/                          # Main source code
 │   ├── main_mac.py              # Application entry point
 │   ├── mac_audio_handler.py     # Voice recognition

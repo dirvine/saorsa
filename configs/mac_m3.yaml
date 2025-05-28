@@ -267,11 +267,11 @@ logging:
   
   levels:
     root: "INFO"
-    saorse.audio: "DEBUG"  # More detailed audio logging
-    saorse.robot: "INFO"
-    saorse.safety: "INFO"
-    saorse.performance: "INFO"
-    saorse.m3: "DEBUG"     # M3 specific logging
+    saorsa.audio: "DEBUG"  # More detailed audio logging
+    saorsa.robot: "INFO"
+    saorsa.safety: "INFO"
+    saorsa.performance: "INFO"
+    saorsa.m3: "DEBUG"     # M3 specific logging
     
   console_output: true
   format: "%(asctime)s - %(name)s - %(levelname)s - [M3] %(message)s"

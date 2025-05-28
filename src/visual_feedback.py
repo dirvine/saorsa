@@ -649,7 +649,7 @@ async def main():
     annotated_frame = visual_feedback.render_frame(test_frame)
     
     # Save result
-    output_path = "/tmp/saorse_visual_feedback_demo.jpg"
+    output_path = "/tmp/saorsa_visual_feedback_demo.jpg"
     if visual_feedback.save_annotated_frame(test_frame, output_path):
         console.print(f"[green]✓ Demo frame saved to {output_path}[/green]")
         

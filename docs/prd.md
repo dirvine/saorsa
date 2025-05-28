@@ -8,7 +8,7 @@ Saorse is a voice-controlled robotic system that enables natural language contro
 ### Project Overview
 
 **Project Name:** Saorse  
-**Repository:** https://github.com/dirvine/saorse  
+**Repository:** https://github.com/dirvine/saorsa  
 **Target Platform:** macOS (Apple Silicon M3)  
 **Primary Language:** Python 3.11+  
 **License:** Apache 2.0
@@ -108,7 +108,7 @@ Saorse is a voice-controlled robotic system that enables natural language contro
 ### File Structure
 
 ```
-saorse/
+saorsa/
 ├── README.md                     # Project overview and quick start
 ├── LICENSE                       # Apache 2.0 license
 ├── requirements.txt              # Python dependencies

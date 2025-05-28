@@ -556,7 +556,7 @@ python scripts/fine_tune_detection.py \
 class SaorseVisionNode:
     def __init__(self):
         self.vision_system = ObjectDetector()
-        self.publisher = rospy.Publisher('/saorse/detections', DetectionArray)
+        self.publisher = rospy.Publisher('/saorsa/detections', DetectionArray)
         
     def process_frame(self, frame):
         detections = self.vision_system.detect_objects(frame)
