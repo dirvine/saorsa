@@ -1,10 +1,10 @@
 # Vision System Setup Guide
 
-This guide covers the complete setup and configuration of the computer vision system for Saorse Phase 3 multimodal robot control.
+This guide covers the complete setup and configuration of the computer vision system for Saorsa Phase 3 multimodal robot control.
 
 ## Overview
 
-The Saorse vision system provides:
+The Saorsa vision system provides:
 - Real-time object detection and tracking
 - Spatial reference resolution for voice commands
 - Visual feedback with detection overlays
@@ -553,7 +553,7 @@ python scripts/fine_tune_detection.py \
 #### ROS Integration
 ```python
 # Example ROS vision node
-class SaorseVisionNode:
+class SaorsaVisionNode:
     def __init__(self):
         self.vision_system = ObjectDetector()
         self.publisher = rospy.Publisher('/saorsa/detections', DetectionArray)
@@ -576,4 +576,4 @@ def detect_objects():
     return jsonify(detections)
 ```
 
-This comprehensive vision setup guide provides all the necessary information for configuring and optimizing the computer vision system in Saorse for reliable multimodal robot control.
+This comprehensive vision setup guide provides all the necessary information for configuring and optimizing the computer vision system in Saorsa for reliable multimodal robot control.

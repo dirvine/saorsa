@@ -1,10 +1,10 @@
 # Voice Commands Reference
 
-This comprehensive guide covers all voice commands supported by the Saorse robot control system across its three operational phases.
+This comprehensive guide covers all voice commands supported by the Saorsa robot control system across its three operational phases.
 
 ## Command Overview
 
-The Saorse system supports voice commands at three levels of sophistication:
+The Saorsa system supports voice commands at three levels of sophistication:
 
 1. **Phase 1**: Basic pattern-matched commands for direct robot control
 2. **Phase 2**: AI-enhanced natural language commands with context awareness

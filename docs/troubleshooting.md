@@ -1,6 +1,6 @@
 # Troubleshooting Guide
 
-This comprehensive troubleshooting guide covers common issues and solutions for the Saorse voice-controlled robot system.
+This comprehensive troubleshooting guide covers common issues and solutions for the Saorsa voice-controlled robot system.
 
 ## Quick Diagnostic Tools
 
@@ -750,4 +750,4 @@ cp -r configs/ config_backup/
 - **Configuration**: Relevant configuration file contents
 - **Logs**: Recent log entries around the time of error
 
-This troubleshooting guide should help resolve most common issues with the Saorse robot control system. For additional support, include the diagnostic information described above when reporting issues.
+This troubleshooting guide should help resolve most common issues with the Saorsa robot control system. For additional support, include the diagnostic information described above when reporting issues.

@@ -1,6 +1,6 @@
 # API Reference
 
-This document provides comprehensive API documentation for the Saorse robot control system, covering all modules, classes, and functions.
+This document provides comprehensive API documentation for the Saorsa robot control system, covering all modules, classes, and functions.
 
 ## Core Modules
 
@@ -484,8 +484,8 @@ class SystemConfig:
 
 ### Custom Exceptions
 
-#### `SaorseError`
-Base exception class for Saorse-specific errors.
+#### `SaorsaError`
+Base exception class for Saorsa-specific errors.
 
 #### `RobotConnectionError`
 Raised when robot connection fails.
@@ -691,4 +691,4 @@ finally:
         robot.disconnect()
 ```
 
-This API reference provides comprehensive documentation for integrating with and extending the Saorse robot control system.
+This API reference provides comprehensive documentation for integrating with and extending the Saorsa robot control system.

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Metal Performance Shaders (MPS) Optimizer for Saorse Robot System
+Metal Performance Shaders (MPS) Optimizer for Saorsa Robot System
 
 This module provides Mac M3 specific optimizations for AI models using
 Metal Performance Shaders, unified memory, and Neural Engine when available.
@@ -721,7 +721,7 @@ async def main():
     
     optimizer = MPSOptimizer()
     
-    console.print("[blue]Saorse MPS Optimizer Demo[/blue]\n")
+    console.print("[blue]Saorsa MPS Optimizer Demo[/blue]\n")
     
     # Show capabilities
     capabilities_table = optimizer.show_capabilities()

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Main Application Entry Point for Saorse Robot Control System
+Main Application Entry Point for Saorsa Robot Control System
 
 This module provides the main application orchestration, command routing,
 and user interface for voice-controlled SO-101 robot arms on Mac M3.
@@ -24,7 +24,7 @@ from rich.live import Live
 from rich.table import Table
 from rich.text import Text
 
-# Import Saorse modules
+# Import Saorsa modules
 from mac_audio_handler import MacAudioHandler, AudioConfig
 from robot_controller_m3 import RobotController, create_default_so101_config, RobotState
 from utils.safety_monitor import SafetyMonitor, create_default_safety_config, SafetyAlert
@@ -214,9 +214,9 @@ class CommandProcessor:
         return False
 
 
-class SaorseApplication:
+class SaorsaApplication:
     """
-    Main Saorse application class.
+    Main Saorsa application class.
     
     Orchestrates all components and provides the main application loop.
     """
@@ -283,7 +283,7 @@ class SaorseApplication:
     async def initialize(self) -> bool:
         """Initialize all application components."""
         try:
-            console.print("[yellow]🚀 Initializing Saorse...")
+            console.print("[yellow]🚀 Initializing Saorsa...")
             
             # Initialize performance monitor
             self.performance_monitor = PerformanceMonitor()
@@ -402,7 +402,7 @@ class SaorseApplication:
             
     async def shutdown(self) -> None:
         """Gracefully shutdown the application."""
-        console.print("[yellow]🔄 Shutting down Saorse...")
+        console.print("[yellow]🔄 Shutting down Saorsa...")
         
         self.is_running = False
         
@@ -420,7 +420,7 @@ class SaorseApplication:
         if self.performance_monitor:
             self.performance_monitor.stop_monitoring()
             
-        console.print("[green]✓ Saorse shutdown complete")
+        console.print("[green]✓ Saorsa shutdown complete")
         
     def _voice_command_callback(self, text: str) -> None:
         """Handle voice command from audio system."""
@@ -550,7 +550,7 @@ class SaorseApplication:
     def _display_banner(self) -> None:
         """Display startup banner."""
         banner = Panel.fit(
-            "[bold blue]Saorse[/bold blue]\n"
+            "[bold blue]Saorsa[/bold blue]\n"
             "[dim]Voice-Controlled SO-101 Robot Arms[/dim]\n"
             f"[dim]Status: {'Connected' if self.is_connected else 'Not Connected'}[/dim]",
             title="🤖 Robot Control System",
@@ -580,7 +580,7 @@ class SaorseApplication:
 @click.option('--verbose', '-v', is_flag=True, help='Enable verbose logging')
 @click.pass_context
 def cli(ctx, config, verbose):
-    """Saorse: Voice-Controlled SO-101 Robot Arms System"""
+    """Saorsa: Voice-Controlled SO-101 Robot Arms System"""
     ctx.ensure_object(dict)
     ctx.obj['config'] = config
     
@@ -599,7 +599,7 @@ def cli(ctx, config, verbose):
               help='Operation mode: basic (voice only), ai (AI-enhanced), multimodal (voice+vision)')
 @click.pass_context
 async def run(ctx, leader_port, follower_port, mode):
-    """Run the main Saorse application."""
+    """Run the main Saorsa application."""
     
     if mode in ['ai', 'multimodal'] and not ADVANCED_FEATURES_AVAILABLE:
         console.print("[red]❌ Advanced features not available. Please install required dependencies.")
@@ -611,7 +611,7 @@ async def run(ctx, leader_port, follower_port, mode):
         await run_multimodal_interface(ctx, leader_port, follower_port)
     else:
         # Run traditional interface
-        app = SaorseApplication(ctx.obj['config'])
+        app = SaorsaApplication(ctx.obj['config'])
         app._setup_signal_handlers()
         
         # Initialize
@@ -636,7 +636,7 @@ async def run(ctx, leader_port, follower_port, mode):
 @click.pass_context
 async def test_audio(ctx):
     """Test audio input system."""
-    app = SaorseApplication(ctx.obj['config'])
+    app = SaorsaApplication(ctx.obj['config'])
     
     if not await app.initialize():
         return
@@ -649,7 +649,7 @@ async def test_audio(ctx):
 @click.pass_context
 async def test_robot(ctx, port):
     """Test robot connection."""
-    app = SaorseApplication(ctx.obj['config'])
+    app = SaorsaApplication(ctx.obj['config'])
     
     if not await app.initialize():
         return
@@ -667,9 +667,9 @@ async def test_robot(ctx, port):
 @click.pass_context
 def status(ctx):
     """Show system status and configuration."""
-    app = SaorseApplication(ctx.obj['config'])
+    app = SaorsaApplication(ctx.obj['config'])
     
-    table = Table(title="Saorse System Status")
+    table = Table(title="Saorsa System Status")
     table.add_column("Component", style="cyan")
     table.add_column("Status", style="green")
     
@@ -700,7 +700,7 @@ async def run_multimodal_interface(ctx, leader_port: str, follower_port: Optiona
         console.print("[red]❌ Multimodal features not available")
         return
         
-    console.print("[blue]🤖👁️🎤 Starting Saorse Multimodal Interface[/blue]")
+    console.print("[blue]🤖👁️🎤 Starting Saorsa Multimodal Interface[/blue]")
     
     # Create multimodal configuration
     config = MultimodalConfig(

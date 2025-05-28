@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Model Download Script for Saorse (Updated for Phase 2)
+Model Download Script for Saorsa (Updated for Phase 2)
 
-This script downloads and sets up the AI models required for Saorse:
+This script downloads and sets up the AI models required for Saorsa:
 - OpenAI Whisper models for speech recognition
 - Hugging Face local models (SmolLM2, Qwen2.5, Phi-3, Gemma-2)
 """
@@ -528,7 +528,7 @@ def download_model_set(set_name: str, force: bool = False) -> bool:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Download AI models for Saorse (Phase 2)")
+    parser = argparse.ArgumentParser(description="Download AI models for Saorsa (Phase 2)")
     parser.add_argument("--list", action="store_true", help="List available models")
     parser.add_argument("--check", action="store_true", help="Check installed models")
     parser.add_argument("--whisper", choices=list(WHISPER_MODELS.keys()), 
@@ -548,7 +548,7 @@ def main():
     
     # Show banner
     console.print(Panel.fit(
-        "[bold blue]Saorse Model Downloader (Phase 2)[/bold blue]\n"
+        "[bold blue]Saorsa Model Downloader (Phase 2)[/bold blue]\n"
         "[dim]Download local AI models for voice-controlled robotics[/dim]",
         title="🤖 AI Model Management",
         border_style="blue"

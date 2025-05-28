@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Model Manager for Saorse Robot System
+Model Manager for Saorsa Robot System
 
 This module provides comprehensive model management including downloading,
 loading, switching, and optimization of local Hugging Face models for
@@ -531,7 +531,7 @@ class ModelLoader:
 
 class ModelManager:
     """
-    Comprehensive model manager for Saorse robot system.
+    Comprehensive model manager for Saorsa robot system.
     
     Handles model discovery, downloading, loading, switching, and optimization
     with special focus on Mac M3 performance.
@@ -558,7 +558,7 @@ class ModelManager:
     def list_available_models(self, show_status: bool = True) -> Table:
         """List all available models with status."""
         
-        table = Table(title="Available Models for Saorse")
+        table = Table(title="Available Models for Saorsa")
         table.add_column("Name", style="cyan")
         table.add_column("Model ID", style="green")
         table.add_column("Size", style="yellow")
@@ -887,7 +887,7 @@ async def main():
     
     manager = ModelManager()
     
-    console.print("[blue]Saorse Model Manager Demo[/blue]\n")
+    console.print("[blue]Saorsa Model Manager Demo[/blue]\n")
     
     # Show available models
     table = manager.list_available_models()

@@ -1,6 +1,6 @@
 # Software Setup Guide
 
-This comprehensive guide covers installing and configuring the Saorse voice-controlled robot system on macOS with Apple Silicon.
+This comprehensive guide covers installing and configuring the Saorsa voice-controlled robot system on macOS with Apple Silicon.
 
 ## Prerequisites
 
@@ -577,4 +577,4 @@ logging:
       level: DEBUG
 ```
 
-This software setup guide provides a complete foundation for installing and configuring the Saorse system. Following these steps ensures a reliable, optimized installation ready for development or production use.
+This software setup guide provides a complete foundation for installing and configuring the Saorsa system. Following these steps ensures a reliable, optimized installation ready for development or production use.

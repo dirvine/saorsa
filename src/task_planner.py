@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Task Planner for Saorse Robot System
+Task Planner for Saorsa Robot System
 
 This module provides advanced task planning, sequence generation, and execution
 monitoring for complex multi-step robot operations.

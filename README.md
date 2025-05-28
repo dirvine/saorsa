@@ -1,10 +1,10 @@
-# Saorse: Advanced Voice-Controlled SO-101 Robot Arms
+# Saorsa: Advanced Voice-Controlled SO-101 Robot Arms
 
 A sophisticated natural language interface for controlling Hugging Face's SO-101 robot arms, featuring voice recognition, AI-powered command interpretation, and computer vision integration. Optimized for macOS with Apple Silicon.
 
 ## Overview
 
-Saorse provides three levels of robot control sophistication:
+Saorsa provides three levels of robot control sophistication:
 
 - **Phase 1**: Core voice control with basic movement commands
 - **Phase 2**: AI-enhanced natural language processing with context awareness  

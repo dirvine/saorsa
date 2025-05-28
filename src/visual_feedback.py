@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Visual Feedback and Overlay System for Saorse Robot System
+Visual Feedback and Overlay System for Saorsa Robot System
 
 This module provides real-time visual feedback including object detection overlays,
 robot status visualization, and augmented reality features for the robot workspace.
@@ -587,7 +587,7 @@ class VisualFeedback:
 async def main():
     """Example usage of VisualFeedback."""
     
-    console.print("[blue]Saorse Visual Feedback Demo[/blue]\n")
+    console.print("[blue]Saorsa Visual Feedback Demo[/blue]\n")
     
     # Create visual feedback system
     config = OverlayConfig(

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AI Command Processor for Saorse Robot System
+AI Command Processor for Saorsa Robot System
 
 This module provides advanced natural language command processing using
 local Hugging Face models including Pi-Zero, SmolLM2, and Qwen2.5.

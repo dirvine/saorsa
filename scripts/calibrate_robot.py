@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Robot Calibration Script for Saorse
+Robot Calibration Script for Saorsa
 
 This script provides robot calibration routines including:
 - Motor connection testing
@@ -466,7 +466,7 @@ class RobotCalibrator:
 
 
 async def main():
-    parser = argparse.ArgumentParser(description="Calibrate Saorse robot system")
+    parser = argparse.ArgumentParser(description="Calibrate Saorsa robot system")
     parser.add_argument("port", help="Robot serial port (e.g., /dev/tty.usbserial-FT1234)")
     parser.add_argument("--quick", action="store_true", help="Run quick calibration only")
     parser.add_argument("--save", default="calibration_results.yaml", help="Output file for results")
@@ -475,7 +475,7 @@ async def main():
     
     # Show banner
     console.print(Panel.fit(
-        "[bold blue]Saorse Robot Calibration[/bold blue]\n"
+        "[bold blue]Saorsa Robot Calibration[/bold blue]\n"
         "[dim]Comprehensive robot setup and testing[/dim]",
         title="🤖 Robot Calibration",
         border_style="blue"
@@ -525,7 +525,7 @@ async def main():
         console.print("\n[blue]Next steps:[/blue]")
         console.print("1. Review calibration results above")
         console.print("2. If all tests passed, robot is ready for voice control")
-        console.print("3. Launch Saorse: ./launch.sh " + args.port)
+        console.print("3. Launch Saorsa: ./launch.sh " + args.port)
         console.print("4. Try voice commands like 'robot move to home position'")
         
     except KeyboardInterrupt:

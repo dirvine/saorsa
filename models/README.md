@@ -1,6 +1,6 @@
 # AI Models Directory
 
-This directory contains the AI models used by Saorse:
+This directory contains the AI models used by Saorsa:
 
 ## Whisper Models
 - `whisper-base.pt` - Base Whisper model for speech recognition

@@ -1,5 +1,5 @@
 """
-Utility modules for Saorse robot control system.
+Utility modules for Saorsa robot control system.
 """
 
 from .safety_monitor import SafetyMonitor

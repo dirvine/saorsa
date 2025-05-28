@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Object Detection Module for Saorse Robot System
+Object Detection Module for Saorsa Robot System
 
 This module provides real-time object detection using local computer vision models
 optimized for Mac M3 with Metal Performance Shaders (MPS).
@@ -673,7 +673,7 @@ class ObjectDetector:
 async def main():
     """Example usage of ObjectDetector."""
     
-    console.print("[blue]Saorse Object Detector Demo[/blue]\n")
+    console.print("[blue]Saorsa Object Detector Demo[/blue]\n")
     
     # Test with different models
     models_to_test = [

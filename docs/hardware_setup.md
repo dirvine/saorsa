@@ -1,6 +1,6 @@
 # Hardware Setup Guide
 
-This guide covers the physical hardware setup for the Saorse voice-controlled SO-101 robot arms system.
+This guide covers the physical hardware setup for the Saorsa voice-controlled SO-101 robot arms system.
 
 ## Required Hardware
 
@@ -323,4 +323,4 @@ System Information → Hardware → USB
 - **GPU**: External GPU for enhanced AI performance (future)
 - **Networking**: Faster networking for remote operation
 
-This hardware setup guide provides the foundation for a reliable, high-performance Saorse robot control system. Proper hardware setup is crucial for optimal system performance and safety.
+This hardware setup guide provides the foundation for a reliable, high-performance Saorsa robot control system. Proper hardware setup is crucial for optimal system performance and safety.

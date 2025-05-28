@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Multimodal Interface for Saorse Robot System
+Multimodal Interface for Saorsa Robot System
 
 This module integrates voice commands with visual understanding to enable
 sophisticated multimodal robot control combining speech and vision.
@@ -656,7 +656,7 @@ class MultimodalInterface:
 async def main():
     """Example usage of MultimodalInterface."""
     
-    console.print("[blue]Saorse Multimodal Interface Demo[/blue]\n")
+    console.print("[blue]Saorsa Multimodal Interface Demo[/blue]\n")
     
     # Create multimodal interface
     config = MultimodalConfig(

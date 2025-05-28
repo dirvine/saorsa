@@ -1,6 +1,6 @@
 #!/bin/bash
-# Saorse Installation Script for macOS
-# This script installs all dependencies and sets up the Saorse robot control system
+# Saorsa Installation Script for macOS
+# This script installs all dependencies and sets up the Saorsa robot control system
 
 set -e  # Exit on any error
 
@@ -40,7 +40,7 @@ if [[ $(uname -m) != "arm64" ]]; then
     log_warning "Intel Macs may work but are not officially supported"
 fi
 
-log_info "Starting Saorse installation for macOS..."
+log_info "Starting Saorsa installation for macOS..."
 
 # Check for required tools
 check_requirements() {
@@ -179,7 +179,7 @@ create_launch_script() {
     
     cat > launch.sh << 'EOF'
 #!/bin/bash
-# Saorse Launch Script
+# Saorsa Launch Script
 
 # Get the directory of this script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -198,7 +198,7 @@ if [[ $# -eq 0 ]]; then
     exit 1
 fi
 
-# Launch Saorse
+# Launch Saorsa
 python src/main_mac.py run --leader-port "$1" ${2:+--follower-port "$2"}
 EOF
 
@@ -237,12 +237,12 @@ else:
 
 # Display completion message
 display_completion() {
-    log_success "Saorse installation complete!"
+    log_success "Saorsa installation complete!"
     echo ""
     echo "Next steps:"
     echo "1. Connect your SO-101 robot arms via USB"
     echo "2. Find your serial ports: ls /dev/tty.usbserial-*"
-    echo "3. Launch Saorse: ./launch.sh /dev/tty.usbserial-XXXXXX"
+    echo "3. Launch Saorsa: ./launch.sh /dev/tty.usbserial-XXXXXX"
     echo ""
     echo "For more information, see:"
     echo "- docs/hardware_setup.md - Hardware connection guide"
@@ -260,7 +260,7 @@ display_completion() {
 # Main installation flow
 main() {
     echo "================================================================="
-    echo "                 Saorse Installation Script"
+    echo "                 Saorsa Installation Script"
     echo "           Voice-Controlled SO-101 Robot Arms"
     echo "================================================================="
     echo ""

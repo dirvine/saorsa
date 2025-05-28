@@ -1,13 +1,13 @@
 # Product Requirements Document (PRD)
-## Saorse: Voice-Controlled SO-101 Robot Arms System
+## Saorsa: Voice-Controlled SO-101 Robot Arms System
 
 ### Executive Summary
 
-Saorse is a voice-controlled robotic system that enables natural language control of Hugging Face's SO-101 robot arms using a Mac M3 computer. The system leverages OpenAI's Whisper for speech recognition and Physical Intelligence's π0 (pi-zero) foundation model for advanced command interpretation, providing an intuitive interface for robotic manipulation tasks.
+Saorsa is a voice-controlled robotic system that enables natural language control of Hugging Face's SO-101 robot arms using a Mac M3 computer. The system leverages OpenAI's Whisper for speech recognition and Physical Intelligence's π0 (pi-zero) foundation model for advanced command interpretation, providing an intuitive interface for robotic manipulation tasks.
 
 ### Project Overview
 
-**Project Name:** Saorse  
+**Project Name:** Saorsa  
 **Repository:** https://github.com/dirvine/saorsa  
 **Target Platform:** macOS (Apple Silicon M3)  
 **Primary Language:** Python 3.11+  
@@ -366,4 +366,4 @@ All dependencies must be compatible with Apache 2.0 license:
 
 ### Conclusion
 
-Saorse represents a significant step forward in making robotic control accessible through natural language. By leveraging the power of Mac M3 hardware and state-of-the-art AI models, we create an intuitive, powerful, and safe system for controlling robotic arms. The modular architecture ensures extensibility while the focus on user experience makes advanced robotics accessible to a broader audience.
+Saorsa represents a significant step forward in making robotic control accessible through natural language. By leveraging the power of Mac M3 hardware and state-of-the-art AI models, we create an intuitive, powerful, and safe system for controlling robotic arms. The modular architecture ensures extensibility while the focus on user experience makes advanced robotics accessible to a broader audience.

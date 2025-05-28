@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-macOS Audio Handler for Saorse Voice Recognition System
+macOS Audio Handler for Saorsa Voice Recognition System
 
 This module provides voice input processing using macOS Core Audio frameworks
 and OpenAI Whisper for speech-to-text conversion, optimized for Apple Silicon M3.

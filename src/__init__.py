@@ -1,5 +1,5 @@
 """
-Saorse: Voice-Controlled SO-101 Robot Arms System
+Saorsa: Voice-Controlled SO-101 Robot Arms System
 
 A natural language interface for controlling robot arms using Mac M3 hardware.
 """

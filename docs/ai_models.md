@@ -1,10 +1,10 @@
 # AI Models Guide
 
-This guide covers the artificial intelligence models used in the Saorse robot control system, including selection criteria, performance characteristics, and optimization strategies for Apple Silicon.
+This guide covers the artificial intelligence models used in the Saorsa robot control system, including selection criteria, performance characteristics, and optimization strategies for Apple Silicon.
 
 ## Model Architecture Overview
 
-The Saorse system uses two main categories of AI models:
+The Saorsa system uses two main categories of AI models:
 
 1. **Language Models**: For natural language understanding and command interpretation
 2. **Vision Models**: For computer vision and object detection (Phase 3)
@@ -595,4 +595,4 @@ python scripts/fine_tune_vision_model.py \
     --output_dir "models/custom_detection_model"
 ```
 
-This comprehensive AI models guide provides the foundation for understanding, selecting, and optimizing artificial intelligence models within the Saorse robot control system.
+This comprehensive AI models guide provides the foundation for understanding, selecting, and optimizing artificial intelligence models within the Saorsa robot control system.

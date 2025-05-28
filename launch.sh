@@ -1,5 +1,5 @@
 #!/bin/bash
-# Saorse Launch Script
+# Saorsa Launch Script
 
 # Get the directory of this script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -13,7 +13,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}========================================${NC}"
-echo -e "${BLUE}           Saorse Robot Control         ${NC}"
+echo -e "${BLUE}           Saorsa Robot Control         ${NC}"
 echo -e "${BLUE}     Voice-Controlled SO-101 Arms      ${NC}"
 echo -e "${BLUE}========================================${NC}"
 echo ""
@@ -123,7 +123,7 @@ if [[ ! -f "$CONFIG_FILE" ]]; then
 fi
 
 # Show startup info
-echo -e "${GREEN}Starting Saorse with:${NC}"
+echo -e "${GREEN}Starting Saorsa with:${NC}"
 echo "  Leader port: $1"
 if [[ -n "$2" ]]; then
     echo "  Follower port: $2"
@@ -160,7 +160,7 @@ else:
 fi
 
 echo ""
-echo -e "${GREEN}🚀 Launching Saorse...${NC}"
+echo -e "${GREEN}🚀 Launching Saorsa...${NC}"
 echo ""
 echo -e "${YELLOW}Voice Commands:${NC}"
 echo "  'robot, move to home position'"
@@ -172,9 +172,9 @@ echo -e "${YELLOW}Control:${NC}"
 echo "  Ctrl+C to stop"
 echo ""
 
-# Launch Saorse with error handling
+# Launch Saorsa with error handling
 set -e
-trap 'echo -e "\n${YELLOW}Saorse stopped${NC}"; exit 0' INT
+trap 'echo -e "\n${YELLOW}Saorsa stopped${NC}"; exit 0' INT
 
 # Run the main application
 python src/main_mac.py run --leader-port "$1" ${2:+--follower-port "$2"} --config "$CONFIG_FILE"

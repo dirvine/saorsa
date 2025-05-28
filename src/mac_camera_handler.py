@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-macOS Camera Handler for Saorse Robot System
+macOS Camera Handler for Saorsa Robot System
 
 This module provides camera integration using macOS AVFoundation framework
 with support for built-in cameras, USB cameras, and iPhone Continuity Camera.
@@ -588,7 +588,7 @@ async def main():
         console.print("[red]macOS AVFoundation not available[/red]")
         return
         
-    console.print("[blue]Saorse Camera Handler Demo[/blue]\n")
+    console.print("[blue]Saorsa Camera Handler Demo[/blue]\n")
     
     # Test camera access
     handler = MacCameraHandler()

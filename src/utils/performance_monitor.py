@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Performance Monitor for Saorse Robot System
+Performance Monitor for Saorsa Robot System
 
 This module provides comprehensive performance monitoring including system metrics,
 AI model inference times, audio processing latency, and robot response times.
@@ -362,7 +362,7 @@ class PerformanceMonitor:
         """Print formatted performance table to console."""
         summary = self.get_performance_summary()
         
-        table = Table(title="Saorse Performance Metrics")
+        table = Table(title="Saorsa Performance Metrics")
         table.add_column("Metric", style="cyan")
         table.add_column("Value", style="magenta")
         table.add_column("Status", style="green")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Safety Monitor for Saorse Robot System
+Safety Monitor for Saorsa Robot System
 
 This module provides comprehensive safety monitoring including workspace limits,
 velocity constraints, temperature monitoring, and emergency stop functionality.

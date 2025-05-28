@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Context Manager for Saorse Robot System
+Context Manager for Saorsa Robot System
 
 This module provides advanced context-aware processing including spatial reasoning,
 temporal context, object tracking, and multi-turn conversation management.

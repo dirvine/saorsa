@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Voice System Test Script for Saorse
+Voice System Test Script for Saorsa
 
 This script provides comprehensive testing of the voice recognition system
 including microphone input, Whisper model performance, and command processing.
@@ -382,7 +382,7 @@ class VoiceSystemTester:
 
 
 async def main():
-    parser = argparse.ArgumentParser(description="Test Saorse voice recognition system")
+    parser = argparse.ArgumentParser(description="Test Saorsa voice recognition system")
     parser.add_argument("--quick", action="store_true", help="Run quick tests only")
     parser.add_argument("--live", action="store_true", help="Run live recognition test")
     parser.add_argument("--benchmark", action="store_true", help="Run performance benchmarks")
@@ -392,7 +392,7 @@ async def main():
     
     # Show banner
     console.print(Panel.fit(
-        "[bold blue]Saorse Voice System Tester[/bold blue]\n"
+        "[bold blue]Saorsa Voice System Tester[/bold blue]\n"
         "[dim]Comprehensive testing of speech recognition components[/dim]",
         title="🎤 Voice Testing",
         border_style="blue"
