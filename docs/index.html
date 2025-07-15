@@ -3,32 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saorsa Labs - Scottish AI & Robotics Research</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Saorsa Labs - Building Robots that Build Themselves</title>
     <style>
-        [x-cloak] { display: none !important; }
-        
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .animate-slide-up {
-            animation: slideUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+            --gray-900: #111827;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--gray-900);
+            line-height: 1.5;
+            scroll-behavior: smooth;
         }
 
-        @keyframes slideUp {
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            color: var(--gray-900);
+        }
+
+        .nav-menu {
+            display: none;
+            gap: 1.5rem;
+            list-style: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--gray-900);
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 0.375rem;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-lg {
+            padding: 0.75rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .nav-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            background: url('soarsa labs..png') center/cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 42rem;
+            padding: 0 1rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
@@ -39,250 +159,349 @@
             }
         }
 
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+            margin-bottom: 1rem;
         }
 
-        .card-hover {
-            transition: all 0.3s ease;
+        .hero-content p {
+            font-size: 1.125rem;
+            color: var(--gray-200);
+            margin-bottom: 2rem;
         }
 
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        .arrow-icon {
+            width: 1.25rem;
+            height: 1.25rem;
         }
 
-        .gradient-text {
-            background: linear-gradient(45deg, #2d5a27, #6a8532);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        /* Sections */
+        section {
+            padding: 5rem 1rem;
         }
 
-        .hero-gradient {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+        .container {
+            max-width: 1152px;
+            margin: 0 auto;
         }
 
-        .scroll-indicator {
-            animation: bounce 2s infinite;
+        .container-sm {
+            max-width: 896px;
+            margin: 0 auto;
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
+        h2 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* About Section */
+        #about {
+            background: white;
+        }
+
+        #about p {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            max-width: 48rem;
+            margin: 0 auto 2.5rem;
+            text-align: center;
+        }
+
+        .lab-image {
+            display: block;
+            max-width: 48rem;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Focus Section */
+        #focus {
+            background: var(--gray-50);
+        }
+
+        .card-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            padding: 1.5rem;
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-xl);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            line-height: 1.5;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        #contact h2 {
+            color: white;
+        }
+
+        #contact p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            background: var(--gray-900);
+            color: var(--gray-400);
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 64px;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: var(--shadow-md);
+            padding: 1rem;
+            z-index: 40;
+        }
+
+        .mobile-menu.open {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem;
+            text-decoration: none;
+            color: var(--gray-900);
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex;
             }
-            40% {
-                transform: translateY(-10px);
+
+            .nav-toggle {
+                display: none;
             }
-            60% {
-                transform: translateY(-5px);
+
+            h1 {
+                font-size: 3.75rem;
+            }
+
+            .hero-content p {
+                font-size: 1.25rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .card-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .nav-btn {
+                display: none;
             }
         }
     </style>
 </head>
-<body class="bg-white dark:bg-gray-900" x-data="{ isOpen: false }">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav" x-data="{ isScrolled: false }" @scroll.window="isScrolled = window.pageYOffset > 50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <img src="docs/Soarsa Labs Logo — Black on White@2x.png" alt="Saorsa Labs Logo" class="h-8">
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-800 hover:text-green-600 transition-colors duration-200">About</a>
-                    <a href="#research" class="text-gray-800 hover:text-green-600 transition-colors duration-200">Research</a>
-                    <a href="#facilities" class="text-gray-800 hover:text-green-600 transition-colors duration-200">Facilities</a>
-                    <a href="#heritage" class="text-gray-800 hover:text-green-600 transition-colors duration-200">Heritage</a>
-                    <a href="#contact" class="text-gray-800 hover:text-green-600 transition-colors duration-200">Contact</a>
-                </div>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">Saorsa Labs</a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#focus">Focus</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn nav-btn">Partner with us</a>
+            <button class="nav-toggle" onclick="toggleMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button @click="isOpen = !isOpen" class="text-gray-800 hover:text-green-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                            <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div x-show="isOpen" x-cloak class="md:hidden bg-white dark:bg-gray-900">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#about" @click="isOpen = false" class="block px-3 py-2 text-gray-800 hover:text-green-600">About</a>
-                <a href="#research" @click="isOpen = false" class="block px-3 py-2 text-gray-800 hover:text-green-600">Research</a>
-                <a href="#facilities" @click="isOpen = false" class="block px-3 py-2 text-gray-800 hover:text-green-600">Facilities</a>
-                <a href="#heritage" @click="isOpen = false" class="block px-3 py-2 text-gray-800 hover:text-green-600">Heritage</a>
-                <a href="#contact" @click="isOpen = false" class="block px-3 py-2 text-gray-800 hover:text-green-600">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#focus" onclick="closeMenu()">Focus</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="docs/8286F969-733B-4335-9C3C-04FDE2B86285_1_105_c.jpeg" alt="Saorsa Labs Facility" class="w-full h-full object-cover">
-            <div class="absolute inset-0 hero-gradient"></div>
-        </div>
-        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8" x-intersect="$el.classList.add('animate-fade-in')">
-            <h1 class="text-4xl sm:text-6xl font-bold text-white mb-6">
-                Pioneering AI & Robotics in Scotland
-            </h1>
-            <p class="text-xl sm:text-2xl text-gray-200 mb-8">
-                Advancing human-centric robotics and AI research from the heart of Galloway Forest
-            </p>
-            <div class="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2">
-                <svg class="w-6 h-6 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    <section id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Building Robots<br>that Build Themselves</h1>
+            <p>Ultra-lean AI & robotics venture studio spinning out tomorrow's autonomous solutions.</p>
+            <a href="#about" class="btn btn-lg">
+                Discover More
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14m-7-7l7 7-7 7"></path>
                 </svg>
-            </div>
+            </a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" x-intersect="$el.classList.add('animate-fade-in')">
-                <h2 class="text-4xl font-bold gradient-text mb-4">About Saorsa Labs</h2>
-                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                    Located in the historic stables of Barr, on the edge of the Galloway Forest in Rural South Ayrshire, 
-                    Saorsa Labs is at the forefront of AI and robotics research. Our focus is on developing innovative 
-                    solutions that enhance human lives through the integration of caring robots and advanced AI systems.
-                </p>
-            </div>
+    <section id="about">
+        <div class="container-sm">
+            <h2 class="fade-in">A Self-Building Laboratory</h2>
+            <p class="fade-in">
+                Saorsa Labs runs on fewer humans and more autonomy: one salaried engineer, a
+                fleet of AI agents, and robotic fabrication cells. Every pound invested goes
+                into hardware, cloud compute, and IP—maximising speed, flexibility, and
+                return.
+            </p>
+            <img src="8A4231CC-0F2C-49B1-B2F2-6F3B05CE3C10_1_105_c.jpeg" alt="Lab snapshot" class="lab-image fade-in">
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" x-intersect="$el.classList.add('animate-fade-in')">
-                <h2 class="text-4xl font-bold gradient-text mb-4">Research Areas</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 card-hover" x-intersect="$el.classList.add('animate-slide-up')">
-                    <img src="docs/54CA898E-B212-4039-B76A-0AE909852F8B_1_105_c.jpeg" alt="Carer Bots" class="w-full h-48 object-cover rounded-lg mb-6">
-                    <h3 class="text-2xl font-bold mb-4 gradient-text">Carer Bots</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
-                        Developing assistive robots focused on supporting human care needs, emphasizing practical functionality 
-                        over complex humanoid designs.
-                    </p>
+    <!-- Focus Areas -->
+    <section id="focus">
+        <div class="container">
+            <h2 class="fade-in">Our Initial Focus</h2>
+            <div class="card-grid">
+                <div class="card fade-in">
+                    <h3>Carer Robots</h3>
+                    <p>Autonomous companions that monitor health & medication for ageing populations.</p>
                 </div>
-                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 card-hover" x-intersect="$el.classList.add('animate-slide-up')" style="animation-delay: 200ms;">
-                    <h3 class="text-2xl font-bold mb-4 gradient-text">Neuromorphic Computing</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
-                        Exploring brain-inspired computing architectures to create more efficient and adaptive AI systems.
-                    </p>
+                <div class="card fade-in">
+                    <h3>AutoProto</h3>
+                    <p>AI-generated designs, 3-D printed & assembled overnight—no human touch.</p>
                 </div>
-                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 card-hover" x-intersect="$el.classList.add('animate-slide-up')" style="animation-delay: 400ms;">
-                    <h3 class="text-2xl font-bold mb-4 gradient-text">Analogue Computing</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
-                        Investigating novel approaches to computation using analogue systems for enhanced efficiency and performance.
-                    </p>
+                <div class="card fade-in">
+                    <h3>Companion AI</h3>
+                    <p>Privacy-first emotional support bots & wearables with on-device LLMs.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Facilities Section -->
-    <section id="facilities" class="py-20 bg-white dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" x-intersect="$el.classList.add('animate-fade-in')">
-                <h2 class="text-4xl font-bold gradient-text mb-4">Our Facilities</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden card-hover" x-intersect="$el.classList.add('animate-slide-up')">
-                    <img src="docs/8A4231CC-0F2C-49B1-B2F2-6F3B05CE3C10_1_105_c.jpeg" alt="Buic Workshop" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-4 gradient-text">Buic Workshop</h3>
-                        <p class="text-gray-600 dark:text-gray-300">
-                            Our metalwork facility, named after Scottish inventor James Buic, specializing in precision robotics fabrication.
-                        </p>
-                    </div>
+                <div class="card fade-in">
+                    <h3>Dark-Factory Tech</h3>
+                    <p>Modular robotics & vision systems enabling 24/7 lights-out manufacturing.</p>
                 </div>
-                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden card-hover" x-intersect="$el.classList.add('animate-slide-up')" style="animation-delay: 200ms;">
-                    <img src="docs/DC613E8A-12C1-4DB7-BBF7-0A937B8F7721_1_105_c.jpeg" alt="Dunlop Laboratory" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-4 gradient-text">Dunlop Laboratory</h3>
-                        <p class="text-gray-600 dark:text-gray-300">
-                            Advanced polymers and plastics research facility, honoring John Boyd Dunlop's innovative spirit.
-                        </p>
-                    </div>
+                <div class="card fade-in">
+                    <h3>Humanoid Helpers</h3>
+                    <p>Agile bipedal platforms for domestic, garden & industrial tasks.</p>
                 </div>
-                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden card-hover" x-intersect="$el.classList.add('animate-slide-up')" style="animation-delay: 400ms;">
-                    <img src="docs/AEECD209-0C6C-4B5B-B8D9-DFF116C40312_1_105_c.jpeg" alt="Maxwell Electronics" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-4 gradient-text">Maxwell Electronics</h3>
-                        <p class="text-gray-600 dark:text-gray-300">
-                            State-of-the-art electronics laboratory, named after James Clerk Maxwell, pioneering electromagnetic theory.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Heritage Section -->
-    <section id="heritage" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" x-intersect="$el.classList.add('animate-fade-in')">
-                <h2 class="text-4xl font-bold gradient-text mb-4">Scottish Innovation Heritage</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 text-center card-hover" x-intersect="$el.classList.add('animate-slide-up')">
-                    <h3 class="text-2xl font-bold mb-4 gradient-text">James Buic</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Pioneer in mechanical engineering and innovation</p>
-                </div>
-                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 text-center card-hover" x-intersect="$el.classList.add('animate-slide-up')" style="animation-delay: 200ms;">
-                    <h3 class="text-2xl font-bold mb-4 gradient-text">John Boyd Dunlop</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Inventor of the pneumatic tire and innovative materials</p>
-                </div>
-                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 text-center card-hover" x-intersect="$el.classList.add('animate-slide-up')" style="animation-delay: 400ms;">
-                    <h3 class="text-2xl font-bold mb-4 gradient-text">James Clerk Maxwell</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Father of electromagnetic theory and modern physics</p>
+                <div class="card fade-in">
+                    <h3>AI Wearables</h3>
+                    <p>Edge-AI devices that extend independence & safety for all ages.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" x-intersect="$el.classList.add('animate-fade-in')">
-                <h2 class="text-4xl font-bold gradient-text mb-4">Contact Us</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="text-center md:text-left" x-intersect="$el.classList.add('animate-slide-up')">
-                    <h3 class="text-2xl font-bold mb-4">Location</h3>
-                    <p class="text-gray-300">
-                        The Stables, Barr<br>
-                        South Ayrshire<br>
-                        Scotland
-                    </p>
-                </div>
-                <div class="text-center md:text-left" x-intersect="$el.classList.add('animate-slide-up')" style="animation-delay: 200ms;">
-                    <h3 class="text-2xl font-bold mb-4">Connect</h3>
-                    <p class="text-gray-300">Email: info@saorsalabs.com</p>
-                </div>
-            </div>
+    <section id="contact">
+        <div class="container-sm">
+            <h2>Partner with Saorsa Labs</h2>
+            <p>Investors, grant bodies and collaborators—let's accelerate the autonomous future together.</p>
+            <a href="mailto:hello@saorsalabs.com" class="btn btn-lg btn-outline">Schedule a Call</a>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        © <span id="year"></span> Saorsa Labs Ltd • Scotland
+    </footer>
+
     <script>
-        // Smooth scroll behavior
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.remove('open');
+        }
+
+        // Fade in animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
     </script>
