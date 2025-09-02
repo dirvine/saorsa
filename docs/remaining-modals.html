@@ -1,0 +1,444 @@
+<!-- ANT-QUIC Modal -->
+<div id="antquic-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('antquic')">×</button>
+        <h2>ANT-QUIC: Native NAT Traversal Networking</h2>
+        <p class="subtitle">Automatic NAT Traversal with Quantum-Secure Unmodified IETF QUIC</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">~100%</div>
+                <div class="stat-label">Connection Success</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">8.7%</div>
+                <div class="stat-label">PQC Overhead</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Zero</div>
+                <div class="stat-label">STUN/TURN Servers</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">ML-KEM-768</div>
+                <div class="stat-label">Default Security</div>
+            </div>
+        </div>
+
+        <h3>Key Innovation</h3>
+        <p>ANT-QUIC achieves what others thought impossible: near 100% NAT traversal success without any infrastructure servers, using unmodified IETF QUIC with quantum-secure cryptography by default.</p>
+
+        <h3>Features</h3>
+        <ul>
+            <li><strong>Native NAT Traversal</strong>: ICE-like candidate discovery with coordinated hole punching</li>
+            <li><strong>No Infrastructure Required</strong>: Pure P2P without STUN/TURN servers</li>
+            <li><strong>Post-Quantum by Default</strong>: ML-KEM-768 (192-bit quantum security) and ML-DSA-65 enabled automatically</li>
+            <li><strong>Hybrid Mode</strong>: Combines X25519 with ML-KEM for defense in depth</li>
+            <li><strong>Minimal Overhead</strong>: Only 8.7% overhead for full post-quantum security</li>
+            <li><strong>Production Ready</strong>: 100% test coverage, comprehensive CI/CD</li>
+        </ul>
+
+        <h3>Architecture</h3>
+        <ul>
+            <li><strong>Core Library</strong>: Pure Rust implementation with zero unsafe code</li>
+            <li><strong>Network Layer</strong>: Unmodified IETF QUIC for transport</li>
+            <li><strong>Discovery Protocol</strong>: ICE-inspired candidate exchange</li>
+            <li><strong>Hole Punching</strong>: Coordinated UDP punching through symmetric NATs</li>
+            <li><strong>Cryptography</strong>: NIST-standardized ML-KEM and ML-DSA algorithms</li>
+        </ul>
+
+        <h3>Performance</h3>
+        <ul>
+            <li><strong>Connection Establishment</strong>: < 100ms typical</li>
+            <li><strong>Throughput</strong>: Line-rate performance with hardware offload</li>
+            <li><strong>Latency</strong>: Minimal added latency (< 1ms)</li>
+            <li><strong>Memory</strong>: < 10MB per connection</li>
+        </ul>
+
+        <h3>Use Cases</h3>
+        <ul>
+            <li><strong>P2P Networks</strong>: Direct peer connections without intermediaries</li>
+            <li><strong>IoT Devices</strong>: Connect devices behind carrier-grade NATs</li>
+            <li><strong>Gaming</strong>: Low-latency direct connections for multiplayer</li>
+            <li><strong>Video Conferencing</strong>: Peer-to-peer video without servers</li>
+            <li><strong>Distributed Systems</strong>: Build truly decentralized networks</li>
+        </ul>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Repository:</strong> <a href="https://github.com/dirvine/ant-quic" style="color: var(--black);">github.com/dirvine/ant-quic</a><br>
+                <strong>Crates.io:</strong> <a href="https://crates.io/crates/ant-quic" style="color: var(--black);">crates.io/crates/ant-quic</a><br>
+                <strong>License:</strong> MIT/Apache-2.0
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Saorsa Core Modal -->
+<div id="core-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('core')">×</button>
+        <h2>Saorsa Core: Multi-Adaptive Neural Network</h2>
+        <p class="subtitle">Comprehensive foundation for decentralized networks with trust-weighted routing</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">1000x</div>
+                <div class="stat-label">Message Reduction</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">4 Words</div>
+                <div class="stat-label">Human Addresses</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Byzantine</div>
+                <div class="stat-label">Fault Tolerant</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Trust</div>
+                <div class="stat-label">Weighted Routing</div>
+            </div>
+        </div>
+
+        <h3>Core Components</h3>
+        
+        <h4>Trust-Weighted Routing</h4>
+        <ul>
+            <li><strong>Adaptive Trust Scores</strong>: Dynamic peer reputation based on behavior</li>
+            <li><strong>Byzantine Fault Tolerance</strong>: Resilient to malicious nodes</li>
+            <li><strong>Self-Healing Network</strong>: Automatic route optimization</li>
+            <li><strong>Sybil Attack Resistance</strong>: Trust-based node admission</li>
+        </ul>
+
+        <h4>RSPS-Optimized DHT</h4>
+        <ul>
+            <li><strong>Root-Scoped Provider Summaries</strong>: 1000x reduction in DHT messages</li>
+            <li><strong>Golomb Coded Sets</strong>: Ultra-compact content summaries</li>
+            <li><strong>Hierarchical Organization</strong>: Efficient content discovery</li>
+            <li><strong>Smart Caching</strong>: Policy-based cache admission</li>
+        </ul>
+
+        <h4>Four-Word Addressing</h4>
+        <ul>
+            <li><strong>Human-Readable</strong>: Memorable four-word addresses</li>
+            <li><strong>Universal Mapping</strong>: Any network identifier to words</li>
+            <li><strong>Voice-Friendly</strong>: Optimized for speech recognition</li>
+            <li><strong>Collision-Free</strong>: Deterministic mapping algorithm</li>
+        </ul>
+
+        <h4>Advanced Features</h4>
+        <ul>
+            <li><strong>Threshold Cryptography</strong>: Shamir's Secret Sharing</li>
+            <li><strong>Forward Error Correction</strong>: Reed-Solomon coding</li>
+            <li><strong>Post-Quantum Security</strong>: ML-KEM/ML-DSA support</li>
+            <li><strong>Two-Stage Backup</strong>: Local shards + network storage</li>
+        </ul>
+
+        <h3>Architecture</h3>
+        <pre style="background: var(--gray-100); padding: 16px; border-radius: 4px; overflow-x: auto;">
+saorsa-core/
+├── dht/              # Distributed Hash Table
+├── routing/          # Trust-weighted routing
+├── addressing/       # Four-word system
+├── crypto/           # Cryptographic primitives
+├── storage/          # Distributed storage
+├── consensus/        # Byzantine consensus
+└── network/          # P2P networking</pre>
+
+        <h3>Performance</h3>
+        <ul>
+            <li><strong>Lookup Time</strong>: O(log n) with trust optimization</li>
+            <li><strong>Message Overhead</strong>: 1000x reduction with RSPS</li>
+            <li><strong>Storage Efficiency</strong>: 30% overhead with FEC</li>
+            <li><strong>Network Resilience</strong>: Survives 33% Byzantine nodes</li>
+        </ul>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-core" style="color: var(--black);">github.com/dirvine/saorsa-core</a><br>
+                <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-core" style="color: var(--black);">crates.io/crates/saorsa-core</a><br>
+                <strong>License:</strong> MIT/Apache-2.0
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Communitas Modal -->
+<div id="communitas-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('communitas')">×</button>
+        <h2>Communitas - Decentralized P2P Collaboration Platform</h2>
+        <p class="subtitle">Empowering Private, Decentralised Collaboration</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">P2P</div>
+                <div class="stat-label">Everything</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">4 Words</div>
+                <div class="stat-label">Identity System</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">E2E</div>
+                <div class="stat-label">Encryption</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Markdown</div>
+                <div class="stat-label">Web Format</div>
+            </div>
+        </div>
+
+        <h3>Overview</h3>
+        <p>Communitas rethinks online collaboration from the ground up. It combines messaging, voice and video calling, screen sharing and collaborative file storage into a single desktop application. Instead of relying on corporate servers, every connection is peer-to-peer and every identity is human-readable. With Communitas you chat, call and work together without surrendering your data to a third party. It's the privacy-first alternative to WhatsApp, Slack and Dropbox.</p>
+
+        <h3>Key Features</h3>
+
+        <h4>Human-Friendly Addresses</h4>
+        <p>At the heart of Communitas is a four-word identity system. Each user, organisation or project is identified by a unique combination of four words—such as ocean-forest-mountain-river—that map to a secure record in a distributed hash table. No more cryptic hashes or email-style usernames: sharing your address is as easy as sharing a memorable phrase.</p>
+
+        <h4>Your Data, Your Control</h4>
+        <p>Communitas stores your files in a two-stage backup system:</p>
+        <ul>
+            <li><strong>Local shards</strong>: Data is split and distributed among your friends or colleagues</li>
+            <li><strong>Network storage</strong>: Shards are published to the Saorsa network's decentralized storage using trust-weighted DHT and erasure coding</li>
+        </ul>
+        <p>Everything is encrypted end-to-end, and only you and your chosen collaborators can decrypt it.</p>
+
+        <h4>Markdown-Powered Web</h4>
+        <p>Every storage container has a built-in web directory with Markdown files. Write your project plan in home.md, add images or videos, and publish it under your four-word address. Others can link to your pages using the same simple four-word format. It's a return to a text-first internet, free from ads and trackers.</p>
+
+        <h4>Secure Communication</h4>
+        <ul>
+            <li><strong>Messaging Layer Security</strong> with post-quantum keys</li>
+            <li><strong>Voice and video calls</strong> over modern QUIC streams</li>
+            <li><strong>Screen sharing and file transfers</strong> built-in</li>
+            <li><strong>End-to-end encryption</strong> for all communications</li>
+        </ul>
+
+        <h3>Entity Types</h3>
+        <p>Communitas treats entities as first-class citizens:</p>
+        <ul>
+            <li><strong>Individuals</strong>: Single users with personal identity and storage</li>
+            <li><strong>Organisations</strong>: Groupings of individuals with hierarchical structure</li>
+            <li><strong>Groups</strong>: Small sets of identities (friends, colleagues)</li>
+            <li><strong>Channels</strong>: Topic-based spaces within organisations</li>
+            <li><strong>Projects</strong>: Containers for specific work items</li>
+        </ul>
+
+        <h3>Technology Stack</h3>
+        <ul>
+            <li><strong>Frontend</strong>: React 18 + TypeScript + Material-UI</li>
+            <li><strong>Backend</strong>: Rust with Tauri v2 for cross-platform desktop app</li>
+            <li><strong>P2P Network</strong>: Saorsa Core with trust-weighted Kademlia DHT</li>
+            <li><strong>Cryptography</strong>: Post-quantum cryptography (ML-KEM/ML-DSA)</li>
+            <li><strong>Storage</strong>: Content-addressed storage with Reed-Solomon erasure coding</li>
+            <li><strong>Communication</strong>: QUIC transport with PQC channel binding</li>
+        </ul>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Repository:</strong> <a href="https://github.com/dirvine/communitas" style="color: var(--black);">github.com/dirvine/communitas</a><br>
+                <strong>Status:</strong> Active Development<br>
+                <strong>License:</strong> Apache-2.0
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Saorsa FEC Modal -->
+<div id="fec-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('fec')">×</button>
+        <h2>Saorsa FEC — Storage, Encryption & FEC</h2>
+        <p class="subtitle">Comprehensive Forward Error Correction with AES-256-GCM authenticated encryption</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">7.5 GB/s</div>
+                <div class="stat-label">Throughput</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">AES-256</div>
+                <div class="stat-label">GCM Encryption</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">3 Modes</div>
+                <div class="stat-label">Encryption Types</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">96-byte</div>
+                <div class="stat-label">Wire Headers</div>
+            </div>
+        </div>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li><strong>Three Encryption Modes</strong>: Convergent, ConvergentWithSecret, and RandomKey</li>
+            <li><strong>Authenticated Encryption</strong>: AES-256-GCM with deterministic nonces</li>
+            <li><strong>Wire-Compatible Format</strong>: 96-byte shard headers for network protocols</li>
+            <li><strong>Storage Pipeline</strong>: High-level file processing with chunking → encryption → FEC → storage</li>
+            <li><strong>Multiple Backends</strong>: LocalStorage, MemoryStorage, MultiStorage (NetworkStorage planned)</li>
+            <li><strong>Legacy Compatibility</strong>: Original Reed-Solomon API still works</li>
+            <li><strong>High Performance</strong>: 1,000-7,500 MB/s with reed-solomon-simd SIMD acceleration</li>
+        </ul>
+
+        <h3>Encryption Modes</h3>
+        
+        <h4>Convergent</h4>
+        <p>Key derived solely from content hash → <strong>global deduplication</strong> (identical content → identical ciphertext).</p>
+        
+        <h4>ConvergentWithSecret</h4>
+        <p>Key derived from content hash + user secret → <strong>per-user deduplication</strong>.</p>
+        
+        <h4>RandomKey</h4>
+        <p>Per-encryption random key → <strong>no deduplication</strong>, maximum confidentiality.</p>
+        
+        <p><strong>Security Note</strong>: Convergent modes can enable confirmation-of-file if an attacker can compute the content hash; ConvergentWithSecret mitigates this by mixing a user secret. RandomKey mode avoids dedup to maximise privacy.</p>
+
+        <h3>FEC Parameters & Storage Overhead</h3>
+        <p>API: with_fec_params(data_shards, parity_shards) where overhead = parity/data.</p>
+        
+        <table style="width: 100%; margin: 16px 0;">
+            <tr>
+                <th>Configuration</th>
+                <th>Overhead</th>
+                <th>Use Case</th>
+            </tr>
+            <tr>
+                <td>(32, 8)</td>
+                <td>25%</td>
+                <td>High performance</td>
+            </tr>
+            <tr>
+                <td>(16, 12)</td>
+                <td>75%</td>
+                <td>High reliability</td>
+            </tr>
+            <tr>
+                <td>(20, 5)</td>
+                <td>25%</td>
+                <td>Minimal storage</td>
+            </tr>
+            <tr>
+                <td>(16, 8)</td>
+                <td>50%</td>
+                <td>Balanced reliability</td>
+            </tr>
+        </table>
+
+        <h3>Shard Format</h3>
+        <p>Each shard uses a compact 96-byte header:</p>
+        <pre style="background: var(--gray-100); padding: 16px; border-radius: 4px; overflow-x: auto;">
+version (u8)          = 3
+file_id (32B)         = Unique file identifier  
+chunk_index (u32)     = Index of chunk within file
+shard_index (u16)     = Index of shard within chunk
+nspec (u8,u8)         = (data_shards, parity_shards)
+flags (u8)            = encrypted, mode, isa-l, compressed
+nonce (12B)           = AES-GCM nonce
+mac (16B)             = AES-GCM tag</pre>
+        <p>Header is authenticated via AEAD and included in CID calculation.</p>
+
+        <h3>Performance</h3>
+        <p><strong>🚀 Exceptional Performance with reed-solomon-simd v0.2.1</strong></p>
+        <ul>
+            <li><strong>1MB files</strong>: 1,193 MB/s (2.4x target)</li>
+            <li><strong>10MB files</strong>: 7,545 MB/s (15x target)</li>
+            <li><strong>50MB files</strong>: 5,366 MB/s (10.7x target)</li>
+        </ul>
+        
+        <p><strong>SIMD Acceleration Support:</strong></p>
+        <ul>
+            <li>AVX2: Intel/AMD advanced vector extensions</li>
+            <li>AVX: Intel/AMD vector extensions</li>
+            <li>SSE4.1: Intel streaming SIMD extensions</li>
+            <li>NEON: ARM vector processing</li>
+            <li>Pure Rust: No C dependencies required</li>
+        </ul>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-fec" style="color: var(--black);">github.com/dirvine/saorsa-fec</a><br>
+                <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-fec" style="color: var(--black);">crates.io/crates/saorsa-fec</a><br>
+                <strong>License:</strong> AGPL-3.0-or-later
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Lab Modal -->
+<div id="lab-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('lab')">×</button>
+        <h2>Our Laboratory</h2>
+        <p class="subtitle">150m² Research Lab in Barr, Scotland</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">150m²</div>
+                <div class="stat-label">Lab Space</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">3D Print</div>
+                <div class="stat-label">Capability</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Laser Cut</div>
+                <div class="stat-label">Precision</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Active</div>
+                <div class="stat-label">Development</div>
+            </div>
+        </div>
+
+        <h3>Location</h3>
+        <p>Our laboratory is located in Barr, a picturesque village in South Ayrshire, Scotland, on the outskirts of the Galloway Forest. This 150m² converted stable block has been transformed into a state-of-the-art robotics research facility.</p>
+
+        <h3>Equipment & Capabilities</h3>
+        <ul>
+            <li><strong>3D Printing</strong>: Professional-grade 3D printers for rapid prototyping</li>
+            <li><strong>Laser Cutting</strong>: Precision laser cutters for custom parts</li>
+            <li><strong>Metal Working</strong>: Welders and metalworking equipment</li>
+            <li><strong>Electronics Lab</strong>: Extensive electronics workbench with oscilloscopes, logic analyzers, and soldering stations</li>
+            <li><strong>Robot Arms</strong>: Multiple robot arms for testing and development</li>
+            <li><strong>Computing Infrastructure</strong>: High-performance workstations for AI model training</li>
+        </ul>
+
+        <h3>Active Research</h3>
+        <p>Our lab is where we develop and test the robot brains that will power the next generation of autonomous systems. We're actively working on:</p>
+        <ul>
+            <li>Vision-Language-Action (VLA) models for robot control</li>
+            <li>CAN bus universal hardware interfaces</li>
+            <li>Local AI model deployment and optimization</li>
+            <li>Safety systems and constraint engines</li>
+            <li>Continuous learning algorithms</li>
+        </ul>
+
+        <h3>Robot Arm Development</h3>
+        <p>Watch Ben control robot arms in our lab:</p>
+        <div style="margin: 20px 0;">
+            <video controls style="width: 100%; max-width: 600px; border-radius: 8px;">
+                <source src="arms.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <h3>Hardware Testing</h3>
+        <div style="margin: 20px 0;">
+            <img src="8A4231CC-0F2C-49B1-B2F2-6F3B05CE3C10_1_105_c.jpeg" alt="Robot arm hardware testing" style="width: 100%; max-width: 600px; border-radius: 8px;">
+        </div>
+
+        <h3>Philosophy</h3>
+        <p>Our lab embodies our vision of decentralized, owner-controlled robotics. Everything we build here is designed to work without cloud dependencies, without corporate control, and with complete sovereignty for the owner. We believe the future of robotics should be in the hands of individuals and communities, not corporations.</p>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Location:</strong> Barr, South Ayrshire, Scotland KA26 9TW<br>
+                <strong>Facility:</strong> 150m² converted stable block<br>
+                <strong>Focus:</strong> Autonomous robotics and local AI<br>
+                <strong>Contact:</strong> saorsalabs@gmail.com
+            </p>
+        </div>
+    </div>
+</div>
