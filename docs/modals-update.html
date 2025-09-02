@@ -1,0 +1,570 @@
+<!-- Updated Modals Section with Actual README Content -->
+
+<!-- Saorsa Robotics Modal -->
+<div id="robotics-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('robotics')">×</button>
+        <h2>🤖 Saorsa Robotics</h2>
+        <p class="subtitle">Production-ready Rust framework for autonomous robotic control with local AI models</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Test Coverage</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Zero</div>
+                <div class="stat-label">Panics in Production</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Local</div>
+                <div class="stat-label">AI Processing</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">CAN Bus</div>
+                <div class="stat-label">Hardware Control</div>
+            </div>
+        </div>
+
+        <h3>Key Features</h3>
+        
+        <h4>🧠 Local AI Models</h4>
+        <ul>
+            <li><strong>MolmoAct Integration</strong>: Action Reasoning Model with 3D spatial understanding and Chain-of-Thought planning</li>
+            <li><strong>Candle ML Framework</strong>: Lightweight Rust-native inference without Python dependencies</li>
+            <li><strong>OpenVLA Support</strong>: Compatible with cloud and local VLA models</li>
+            <li><strong>On-Device Learning</strong>: Continual improvement through OFT adapters and intervention learning</li>
+        </ul>
+
+        <h4>🛡️ Safety-Critical Design</h4>
+        <ul>
+            <li><strong>Formal Constraint System</strong>: Expression-based DSL for defining safety boundaries</li>
+            <li><strong>Real-Time Monitoring</strong>: Watchdog systems with automatic intervention</li>
+            <li><strong>Zero Panic Guarantee</strong>: No unwrap(), expect(), or panic!() in production code</li>
+            <li><strong>Comprehensive Testing</strong>: 100% test coverage on safety-critical paths</li>
+        </ul>
+
+        <h4>🎯 Advanced Capabilities</h4>
+        <ul>
+            <li><strong>Multi-Modal Control</strong>: Voice commands, vision processing, and haptic feedback</li>
+            <li><strong>Stereo Vision</strong>: Depth perception with dual camera calibration</li>
+            <li><strong>CAN Bus Integration</strong>: Direct hardware control for motors and actuators</li>
+            <li><strong>Intent Parsing</strong>: Natural language to robot action conversion</li>
+        </ul>
+
+        <h4>⚡ Performance</h4>
+        <ul>
+            <li><strong>Zero-Copy Data Paths</strong>: Efficient memory usage</li>
+            <li><strong>Async/Await</strong>: Non-blocking I/O throughout</li>
+            <li><strong>Action Chunking</strong>: Smooth control despite network latency</li>
+            <li><strong>Real-Time Capable</strong>: Deterministic timing for critical operations</li>
+        </ul>
+
+        <h3>Architecture</h3>
+        <pre style="background: var(--gray-100); padding: 16px; border-radius: 4px; overflow-x: auto;">
+saorsa-robotics/
+├── apps/                       # Application binaries
+│   ├── sr-cli/                # Main CLI interface
+│   ├── brain-daemon/          # Central coordination daemon
+│   ├── safety-demo/           # Safety system demonstration
+│   └── kyutai-stt-app/       # Speech-to-text application
+├── crates/                    # Core library crates
+│   ├── vla-policy/           # Vision-Language-Action models
+│   ├── safety-guard/         # Safety constraint engine
+│   ├── voice-local/          # On-device voice processing
+│   ├── vision-stereo/        # Stereo vision and depth
+│   ├── intent-parser/        # NLU and command parsing
+│   ├── can-transport/        # CAN bus communication
+│   ├── device-registry/      # Hardware device management
+│   └── continual-learning/   # Online learning framework</pre>
+
+        <h3>Core Components</h3>
+
+        <h4>VLA Policy System</h4>
+        <p>Implements multiple Vision-Language-Action models for robot control with MolmoAct Chain-of-Thought reasoning, waypoint generation for complex tasks, skills framework (Pick, Place, Reach), and mock policy for testing.</p>
+
+        <h4>Safety Guard</h4>
+        <p>Expression-based constraint system ensuring safe operation with mathematical expression constraints, real-time evaluation with evalexpr, watchdog monitoring, and automatic intervention on violations.</p>
+
+        <h4>Voice Control</h4>
+        <p>On-device speech recognition and wake word detection featuring Kyutai/Mimi model integration, real-time transcription, wake word detection, and plugin architecture for custom models.</p>
+
+        <h4>Stereo Vision</h4>
+        <p>Depth perception and 3D scene understanding with dual camera calibration, real-time depth estimation, AprilTag detection, and point cloud generation.</p>
+
+        <h4>CAN Transport</h4>
+        <p>Hardware control via CAN bus supporting SLCAN protocol, ODrive motor control, T-Motor actuator support, and mock transport for testing.</p>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-robotics" style="color: var(--black);">github.com/dirvine/saorsa-robotics</a><br>
+                <strong>License:</strong> MIT<br>
+                <strong>Status:</strong> Production-ready with 100% test coverage on critical paths
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Saorsa PQC Modal -->
+<div id="pqc-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('pqc')">×</button>
+        <h2>Saorsa Post-Quantum Cryptography Library</h2>
+        <p class="subtitle">Comprehensive, production-ready Post-Quantum Cryptography library with NIST FIPS-certified algorithms</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">FIPS</div>
+                <div class="stat-label">203, 204, 205</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">256-bit</div>
+                <div class="stat-label">Quantum Security</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Test Vectors</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Zero</div>
+                <div class="stat-label">Unsafe Code</div>
+            </div>
+        </div>
+
+        <h3>Features</h3>
+        <ul>
+            <li><strong>Complete Quantum-Secure Suite</strong>: Both asymmetric (PQC) and symmetric encryption with comprehensive cryptographic primitives</li>
+            <li><strong>FIPS-Certified Implementations</strong>: Uses NIST FIPS-certified crates for ML-KEM, ML-DSA, and SLH-DSA</li>
+            <li><strong>Extensive Cryptographic Library</strong>: BLAKE3, SHA3, HMAC, HKDF, AES-256-GCM, ChaCha20-Poly1305, and HPKE</li>
+            <li><strong>Official Test Vector Validation</strong>: All algorithms validated against NIST ACVP, RFC, and specification test vectors</li>
+            <li><strong>High Performance</strong>: Optimized implementations with SIMD support where available</li>
+            <li><strong>Memory Safety</strong>: Automatic zeroization of sensitive data</li>
+        </ul>
+
+        <h3>Supported Algorithms</h3>
+
+        <h4>Cryptographic Primitives (All Quantum-Resistant)</h4>
+
+        <h5>Hash Functions</h5>
+        <ul>
+            <li><strong>BLAKE3</strong>: Modern cryptographic hash with tree hashing
+                <ul>
+                    <li>High Performance: Faster than SHA2/SHA3 with parallelization</li>
+                    <li>256-bit Output: Configurable output length (XOF capability)</li>
+                </ul>
+            </li>
+            <li><strong>SHA3-256/SHA3-512</strong>: NIST FIPS 202 Keccak-based hash functions
+                <ul>
+                    <li>NIST Standard: FIPS 202 compliant implementation</li>
+                    <li>Quantum Resistance: Based on different mathematical foundation than SHA2</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h5>Key Derivation Functions (KDF)</h5>
+        <ul>
+            <li><strong>HKDF-SHA3-256/HKDF-SHA3-512</strong>: Extract-and-expand key derivation
+                <ul>
+                    <li>RFC 5869 Based: Adapted for SHA3 hash functions</li>
+                    <li>Secure Key Derivation: Extract entropy then expand to desired length</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h5>Authenticated Encryption (AEAD)</h5>
+        <ul>
+            <li><strong>AES-256-GCM</strong>: Hardware-accelerated authenticated encryption
+                <ul>
+                    <li>Hardware Support: AES-NI acceleration on modern CPUs</li>
+                    <li>256-bit Security: Quantum-resistant key size</li>
+                </ul>
+            </li>
+            <li><strong>ChaCha20-Poly1305</strong>: Software-optimized authenticated encryption
+                <ul>
+                    <li>Constant-Time: Resistant to side-channel attacks</li>
+                    <li>256-bit Security: Full 256-bit key strength</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h5>Hybrid Public Key Encryption (HPKE)</h5>
+        <ul>
+            <li><strong>HPKE with ML-KEM</strong>: RFC 9180 hybrid encryption bound to post-quantum KEMs
+                <ul>
+                    <li>Post-Quantum: Combines ML-KEM with symmetric primitives</li>
+                    <li>Multiple Modes: Base mode and PSK (pre-shared key) mode</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>ML-KEM (FIPS 203) - Key Encapsulation</h4>
+        <ul>
+            <li><strong>ML-KEM-512</strong>: NIST Level 1 (128-bit security)</li>
+            <li><strong>ML-KEM-768</strong>: NIST Level 3 (192-bit security)</li>
+            <li><strong>ML-KEM-1024</strong>: NIST Level 5 (256-bit security)</li>
+        </ul>
+
+        <h4>ML-DSA (FIPS 204) - Digital Signatures</h4>
+        <ul>
+            <li><strong>ML-DSA-44</strong>: NIST Level 2 (~128-bit security)</li>
+            <li><strong>ML-DSA-65</strong>: NIST Level 3 (~192-bit security)</li>
+            <li><strong>ML-DSA-87</strong>: NIST Level 5 (~256-bit security)</li>
+        </ul>
+
+        <h4>SLH-DSA (FIPS 205) - Stateless Hash-Based Signatures</h4>
+        <p>12 variants covering all combinations of hash functions (SHA2, SHAKE), security levels (128, 192, 256 bits), and trade-offs (Small signatures vs Fast signing)</p>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-pqc" style="color: var(--black);">github.com/dirvine/saorsa-pqc</a><br>
+                <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-pqc" style="color: var(--black);">crates.io/crates/saorsa-pqc</a><br>
+                <strong>License:</strong> MIT/Apache-2.0
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Four-Word Networking Modal -->
+<div id="fourword-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('fourword')">×</button>
+        <h2>Four-Word Networking: Human-Readable IP Address Encoding</h2>
+        <p class="subtitle">Beyond IP Addresses: Service Addresses for Everyone</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">65,536</div>
+                <div class="stat-label">Services per Device</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Zero</div>
+                <div class="stat-label">Registration Fees</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">4 Words</div>
+                <div class="stat-label">All You Need</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">P2P</div>
+                <div class="stat-label">Direct Connection</div>
+            </div>
+        </div>
+
+        <h3>How It Works in Real Life</h3>
+
+        <h4>Starting Your Digital Presence</h4>
+        <p>When you start your node on this peer-to-peer network, you might receive four words like "black tree fish river". Share these words with friends, and they can instantly connect to you—no technical knowledge required. Whether you're creating a private friend network or joining a global community, those four words are your gateway.</p>
+
+        <h4>Multiple Services, One Device</h4>
+        <p>Your computer becomes a Swiss Army knife of services:</p>
+        <ul>
+            <li><strong>Website</strong>: black tree fish river</li>
+            <li><strong>Voice/Video Calls</strong>: mountain cat yes valley</li>
+            <li><strong>Crypto Wallet</strong>: monkey rain bike forest</li>
+            <li><strong>File Sharing</strong>: sunset river song ocean</li>
+        </ul>
+        <p>Each service runs on the same machine but has its own memorable address. Tell a friend to video call you at "mountain cat yes valley"—that's it. No apps to download, no accounts to create, just direct, secure communication.</p>
+
+        <h4>Revolutionizing Digital Payments</h4>
+        <p>Cryptocurrency addresses are notoriously complex: long strings of random characters that are easy to mistype and impossible to remember. With four-word networking, sending Bitcoin becomes as simple as saying "send 2 Bitcoin to monkey rain bike forest".</p>
+        <p>For the technically curious, this elegantly solves the challenge of transmitting high-entropy data (complex cryptographic addresses) through a low-entropy channel (human speech and memory).</p>
+
+        <h3>A DNS for the People</h3>
+        <p>Think of it as a massive, global directory service—like DNS but:</p>
+        <ul>
+            <li><strong>Free</strong>: No registration fees, no renewals</li>
+            <li><strong>Secure</strong>: Built on peer-to-peer principles with end-to-end encryption</li>
+            <li><strong>Decentralized</strong>: No single company or government controls it</li>
+            <li><strong>Fair</strong>: Everyone gets an equal chance at memorable addresses</li>
+        </ul>
+
+        <h4>The Name Game Is Already Over</h4>
+        <p>Critics might say "but you can't choose your own words!" Yet look at today's internet: all the good domain names are taken. We're left with misspelled company names, hard-to-pronounce combinations, and domains that have nothing to do with their content.</p>
+        <p>Four-word networking actually levels the playing field. Everyone gets equally memorable addresses, allocated fairly by the system.</p>
+
+        <h3>Why This Matters</h3>
+
+        <h4>For Regular Users</h4>
+        <ul>
+            <li><strong>Simplicity</strong>: Share services as easily as telling someone your favorite four words</li>
+            <li><strong>Privacy</strong>: Direct connections mean no middlemen tracking your communications</li>
+            <li><strong>Cost</strong>: Zero fees for addressing—forever</li>
+        </ul>
+
+        <h4>For Developers and Creators</h4>
+        <ul>
+            <li><strong>Instant Publishing</strong>: Launch a website without buying domains or hosting</li>
+            <li><strong>Direct Services</strong>: Offer video calls, file sharing, or custom applications directly from your device</li>
+            <li><strong>True Ownership</strong>: You control your services, not a hosting company</li>
+            <li><strong>Network cold start</strong>: This solves the "bootstrapping problem" where folk pass around hashes and network identifiers</li>
+        </ul>
+
+        <h3>The Four-Word Solution</h3>
+        <p>The evolution from three-word to four-word networking represents a crucial balance between human usability and practical dictionary constraints. Four words provide the perfect balance: manageable dictionary size (4,096 words), high-quality memorable words, clear voice communication, and international compatibility.</p>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Repository:</strong> <a href="https://github.com/dirvine/four-word-networking" style="color: var(--black);">github.com/dirvine/four-word-networking</a><br>
+                <strong>Crates.io:</strong> <a href="https://crates.io/crates/four-word-networking" style="color: var(--black);">crates.io/crates/four-word-networking</a><br>
+                <strong>License:</strong> MIT/Apache-2.0
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Saorsa SEAL Modal -->
+<div id="seal-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('seal')">×</button>
+        <h2>Saorsa SEAL</h2>
+        <p class="subtitle">Threshold sealing for group data in the Saorsa network</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">Threshold</div>
+                <div class="stat-label">Cryptography</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">FEC</div>
+                <div class="stat-label">Error Correction</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">PQC</div>
+                <div class="stat-label">Post-Quantum</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">DHT</div>
+                <div class="stat-label">Distributed Storage</div>
+            </div>
+        </div>
+
+        <h3>Features</h3>
+        <ul>
+            <li><strong>Threshold Sealing</strong>: Secure data using Shamir's Secret Sharing with configurable thresholds</li>
+            <li><strong>Forward Error Correction</strong>: Reed-Solomon coding for data recovery and fault tolerance</li>
+            <li><strong>AEAD Encryption</strong>: XChaCha20-Poly1305 authenticated encryption via saorsa-fec</li>
+            <li><strong>Post-Quantum Cryptography</strong>: ML-KEM-768 hybrid encryption (optional)</li>
+            <li><strong>Distributed Storage</strong>: DHT abstraction for decentralized data storage</li>
+            <li><strong>Verifiable Shares</strong>: Feldman commitments for share verification</li>
+            <li><strong>Multiple Envelope Types</strong>: Classical (X25519) and post-quantum encryption</li>
+            <li><strong>Async/Await</strong>: Full async support with tokio integration</li>
+        </ul>
+
+        <h3>Architecture</h3>
+        <p>This crate leverages the Saorsa ecosystem:</p>
+        <ul>
+            <li><strong>saorsa-core</strong>: Threshold cryptography and DHT abstraction</li>
+            <li><strong>saorsa-fec</strong>: Forward error correction and AEAD encryption</li>
+            <li><strong>saorsa-pqc</strong>: Post-quantum cryptography (optional)</li>
+        </ul>
+
+        <h3>Envelope Types</h3>
+        <ul>
+            <li><strong>EnvelopeKind::None</strong>: No recipient-level encryption (shares stored in plaintext)</li>
+            <li><strong>EnvelopeKind::Classical</strong>: X25519 + XChaCha20-Poly1305 encryption</li>
+            <li><strong>EnvelopeKind::PostQuantum</strong>: ML-KEM-768 + AES-GCM hybrid encryption</li>
+        </ul>
+
+        <h3>Performance</h3>
+        <p>The library is optimized for throughput with configurable chunking:</p>
+        <ul>
+            <li><strong>Small files</strong> (< 1MB): Direct processing</li>
+            <li><strong>Large files</strong>: Chunked processing with parallel FEC encoding</li>
+            <li><strong>Symbol size</strong>: Configurable for optimal memory usage</li>
+            <li><strong>Streaming</strong>: Async iterators for large datasets</li>
+        </ul>
+        
+        <p>Benchmarks show:</p>
+        <ul>
+            <li>1KB files: ~100μs sealing time</li>
+            <li>100MB files: ~500ms sealing time</li>
+            <li>Memory usage: ~2x symbol_size × (data_shares + parity_shares)</li>
+        </ul>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-seal" style="color: var(--black);">github.com/dirvine/saorsa-seal</a><br>
+                <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-seal" style="color: var(--black);">crates.io/crates/saorsa-seal</a><br>
+                <strong>License:</strong> Apache-2.0/MIT
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Saorsa MLS Modal -->
+<div id="mls-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('mls')">×</button>
+        <h2>Saorsa MLS</h2>
+        <p class="subtitle">Message Layer Security (RFC 9420) with post-quantum cryptography for P2P secure group communication</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">RFC 9420</div>
+                <div class="stat-label">Protocol Flow</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">ML-KEM</div>
+                <div class="stat-label">Key Agreement</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">ML-DSA</div>
+                <div class="stat-label">Signatures</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">TreeKEM</div>
+                <div class="stat-label">Group Keys</div>
+            </div>
+        </div>
+
+        <h3>Features</h3>
+        <ul>
+            <li><strong>RFC 9420 Protocol Flow</strong>: Implements MLS protocol semantics and message flow</li>
+            <li><strong>Post-Quantum Cryptography</strong>: Uses NIST-standardized ML-KEM (Kyber) and ML-DSA (Dilithium) algorithms</li>
+            <li><strong>Group Management</strong>: Create, join, and manage secure group communication per RFC 9420</li>
+            <li><strong>Forward Secrecy</strong>: Cryptographic forward secrecy through epoch-based key rotation</li>
+            <li><strong>Post-Compromise Security</strong>: Automatic recovery from member key compromise</li>
+            <li><strong>TreeKEM</strong>: RFC 9420-compliant tree-based group key agreement with PQC</li>
+            <li><strong>Asynchronous Architecture</strong>: Built on Tokio for high-performance async operations</li>
+            <li><strong>Memory Safe</strong>: Written in Rust with secure zeroization of sensitive data</li>
+        </ul>
+
+        <h3>Core Components (RFC 9420 with PQC)</h3>
+        <ul>
+            <li><strong>Group Management</strong>: RFC 9420-compliant group creation and membership operations</li>
+            <li><strong>Key Derivation</strong>: HKDF-based key schedule as specified in RFC 9420 Section 8</li>
+            <li><strong>Message Encryption</strong>: ChaCha20-Poly1305 AEAD encryption (RFC 9420 Section 5.2)</li>
+            <li><strong>Signature Verification</strong>: ML-DSA (Dilithium) signatures for quantum-resistant authentication</li>
+            <li><strong>Key Agreement</strong>: ML-KEM (Kyber) for post-quantum key encapsulation</li>
+            <li><strong>TreeKEM</strong>: RFC 9420 Section 7 tree-based group key agreement with PQC adaptations</li>
+        </ul>
+
+        <h3>Security Properties (RFC 9420 Section 1.1)</h3>
+        <ul>
+            <li><strong>Forward Secrecy</strong>: Epoch-based key rotation ensures past messages remain secure</li>
+            <li><strong>Post-Compromise Security</strong>: Automatic recovery from member key compromise through TreeKEM updates</li>
+            <li><strong>Authentication</strong>: Quantum-resistant ML-DSA signatures authenticate all group operations</li>
+            <li><strong>Integrity</strong>: AEAD encryption provides message integrity and confidentiality</li>
+            <li><strong>Quantum Resistance</strong>: ML-KEM and ML-DSA provide security against quantum computer attacks</li>
+        </ul>
+
+        <h3>Cipher Suites</h3>
+        <p>Post-quantum cipher suites replacing RFC 9420 Section 16.1:</p>
+        <ul>
+            <li><strong>MlKem768MlDsa65</strong>: ML-KEM-768 + ML-DSA-65 + ChaCha20-Poly1305 + BLAKE3 (NIST Level 3)</li>
+            <li><strong>MlKem1024MlDsa87</strong>: ML-KEM-1024 + ML-DSA-87 + ChaCha20-Poly1305 + BLAKE3 (NIST Level 5)</li>
+        </ul>
+
+        <h3>Message Formats (RFC 9420 Section 6)</h3>
+        <p>All messages follow RFC 9420 wire format with PQC adaptations:</p>
+        <ul>
+            <li><strong>MLSMessage</strong>: Top-level message container (Section 6)</li>
+            <li><strong>ApplicationMessage</strong>: AEAD-encrypted group content (Section 6.3)</li>
+            <li><strong>HandshakeMessage</strong>: Group operations (Add, Remove, Update, Commit) (Section 12)</li>
+            <li><strong>Welcome</strong>: New member onboarding with encrypted group secrets (Section 12.4.3)</li>
+            <li><strong>KeyPackage</strong>: Member credentials and public keys (Section 10)</li>
+        </ul>
+
+        <h3>Status</h3>
+        <p><strong>Experimental Implementation</strong> - This crate implements core concepts from RFC 9420 while replacing classical cryptographic primitives with post-quantum alternatives. It provides RFC 9420-compatible protocol flow and semantics, but uses quantum-resistant algorithms instead of traditional elliptic curve cryptography.</p>
+        <p><strong>Do not use this crate to protect sensitive data in production systems.</strong></p>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-mls" style="color: var(--black);">github.com/dirvine/saorsa-mls</a><br>
+                <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-mls" style="color: var(--black);">crates.io/crates/saorsa-mls</a><br>
+                <strong>License:</strong> AGPL-3.0-or-later / Commercial
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Saorsa RSPS Modal -->
+<div id="rsps-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('rsps')">×</button>
+        <h2>Saorsa RSPS</h2>
+        <p class="subtitle">Root-Scoped Provider Summaries using Golomb Coded Sets for efficient DHT lookups</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">1000x</div>
+                <div class="stat-label">Message Reduction</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">20-30%</div>
+                <div class="stat-label">More Compact</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">< 1ms</div>
+                <div class="stat-label">Membership Test</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">L1 Cache</div>
+                <div class="stat-label">Memory Fit</div>
+            </div>
+        </div>
+
+        <h3>What This Solves</h3>
+        <p>In decentralized networks like IPFS, BitTorrent, and other DHT-based P2P systems, finding content is expensive. Traditional approaches require:</p>
+        <ul>
+            <li><strong>Broadcasting provider records</strong> for every piece of content to the entire DHT network, consuming massive bandwidth</li>
+            <li><strong>Flooding the network</strong> with discovery requests when searching for related content</li>
+            <li><strong>Storing individual provider records</strong> for millions of Content IDs (CIDs), overwhelming DHT nodes</li>
+        </ul>
+
+        <h3>The Problem: DHT Provider Record Explosion</h3>
+        <p>When you store a large dataset (like a website, software repository, or media collection) in a P2P network, each file chunk gets its own CID. A typical website might have thousands of CIDs, a software repository tens of thousands. Publishing provider records for each CID individually to the DHT:</p>
+        <ul>
+            <li>Creates <strong>millions of DHT messages</strong> for large content</li>
+            <li><strong>Overwhelms DHT nodes</strong> with storage requirements</li>
+            <li>Makes <strong>content discovery slow</strong> due to network-wide searches</li>
+            <li><strong>Wastes bandwidth</strong> with redundant provider advertisements</li>
+        </ul>
+
+        <h3>The Solution: Root-Scoped Provider Summaries</h3>
+        <p>Instead of advertising individual CIDs, RSPS lets you:</p>
+        <ol>
+            <li><strong>Group related content</strong> under a single "root CID" (like a directory, repository, or collection)</li>
+            <li><strong>Create a compact summary</strong> using Golomb Coded Sets that represents thousands of CIDs in just a few KB</li>
+            <li><strong>Advertise only the summary</strong> to the DHT, reducing messages by 1000x or more</li>
+            <li><strong>Enable fast batch discovery</strong> - one lookup tells you if ANY of thousands of CIDs might be available</li>
+        </ol>
+
+        <h3>Real-World Use Cases</h3>
+        <ul>
+            <li><strong>Content Distribution</strong>: Efficiently advertise that you host an entire website/app without flooding the DHT</li>
+            <li><strong>Software Repositories</strong>: Let peers discover if you have specific versions/packages without individual lookups</li>
+            <li><strong>Media Collections</strong>: Advertise entire albums, movie series, or dataset collections as single summaries</li>
+            <li><strong>Version Control</strong>: Organize git-like repositories with hierarchical content discovery</li>
+            <li><strong>Caching Networks</strong>: Smart cache admission - only cache content that's part of advertised collections</li>
+        </ul>
+
+        <h3>Features</h3>
+        <ul>
+            <li><strong>Golomb Coded Sets</strong>: Space-efficient Content ID (CID) summaries with configurable false positive rates</li>
+            <li><strong>Root-anchored Cache</strong>: Cache admission policies anchored to root CIDs for hierarchical data organization</li>
+            <li><strong>TTL Management</strong>: Sophisticated time-to-live management with hit tracking and witness receipts</li>
+            <li><strong>VRF Pseudonyms</strong>: Verifiable Random Function pseudonyms for witness receipt systems</li>
+            <li><strong>Async/Await Support</strong>: Full async/await support with Tokio</li>
+            <li><strong>High Performance</strong>: Optimized for P2P DHT operations with minimal memory overhead</li>
+        </ul>
+
+        <h3>Performance Benefits</h3>
+        <ul>
+            <li><strong>20-30% more compact</strong> than Bloom filters for the same false positive rate</li>
+            <li><strong>1000x reduction</strong> in DHT provider record messages for large content collections</li>
+            <li><strong>Sub-millisecond membership testing</strong> for thousands of CIDs</li>
+            <li><strong>Minimal memory overhead</strong> - entire summaries fit in L1 cache</li>
+            <li><strong>Network-efficient serialization</strong> - summaries transport in single UDP packets</li>
+        </ul>
+
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
+            <p style="margin: 0; font-size: 12px;">
+                <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-rsps" style="color: var(--black);">github.com/dirvine/saorsa-rsps</a><br>
+                <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-rsps" style="color: var(--black);">crates.io/crates/saorsa-rsps</a><br>
+                <strong>License:</strong> MIT/Apache-2.0
+            </p>
+        </div>
+    </div>
+</div>

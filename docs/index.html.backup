@@ -3,21 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Saorsa Labs builds self-sovereign AI and robotics: owner-controlled robot brains, quantum-secure P2P networking, and open-source infrastructure from Scotland.">
-    <link rel="canonical" href="https://saorsalabs.com/">
-    <meta property="og:title" content="Saorsa Labs — Self-Sovereign AI & Robotics">
-    <meta property="og:description" content="Owner-controlled robot brains. Quantum-secure P2P networking. Open-source sovereign infrastructure.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://saorsalabs.com/">
-    <meta property="og:image" content="https://saorsalabs.com/Soarsa%20Labs%20Logo%20%E2%80%94%20Black%20on%20White@2x.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Saorsa Labs — Self-Sovereign AI & Robotics">
-    <meta name="twitter:description" content="Owner-controlled robot brains. Quantum-secure P2P networking. Open-source sovereign infrastructure.">
-    <meta name="twitter:image" content="https://saorsalabs.com/Soarsa%20Labs%20Logo%20%E2%80%94%20Black%20on%20White@2x.png">
     <title>Saorsa Labs - Providing Self Sovereign AI and Robotics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -26,9 +15,8 @@
         }
 
         :root {
-            --font-body: 'Inter', sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
-            --font-handwriting: 'Caveat', cursive;
+            --font-serif: 'EB Garamond', serif;
             --black: #000000;
             --gray-900: #111111;
             --gray-800: #1a1a1a;
@@ -40,24 +28,18 @@
             --gray-200: #e5e5e5;
             --gray-100: #f7f7f5;
             --white: #ffffff;
-            --bg: #f8f7f4;
+            --bg: #fafaf9;
             --max-width: 1000px;
         }
 
         body {
-            font-family: var(--font-body);
+            font-family: var(--font-mono);
             color: var(--black);
             line-height: 1.6;
-            font-size: 14px;
+            font-size: 13px;
             background: var(--bg);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Smooth scrolling for in-page anchors */
-        html { scroll-behavior: smooth; }
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
         }
 
         /* Container */
@@ -78,7 +60,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
         }
 
         .logo {
@@ -107,18 +88,6 @@
             color: var(--black);
         }
 
-        /* Mobile nav toggle */
-        .nav-toggle {
-            display: none;
-            background: transparent;
-            border: 1px solid var(--gray-300);
-            border-radius: 4px;
-            padding: 6px 10px;
-            font-size: 16px;
-            line-height: 1;
-            cursor: pointer;
-        }
-
         /* Main */
         main {
             min-height: 100vh;
@@ -133,17 +102,16 @@
         }
 
         .hero h1 {
-            font-family: var(--font-handwriting);
-            font-size: 52px;
-            font-weight: 600;
+            font-family: var(--font-serif);
+            font-size: 42px;
+            font-weight: 400;
             line-height: 1.2;
             margin-bottom: 20px;
             color: var(--black);
         }
 
         .hero .subtitle {
-            font-family: var(--font-body);
-            font-size: 13px;
+            font-size: 12px;
             color: var(--gray-600);
             max-width: 600px;
             margin: 0 auto 20px;
@@ -170,16 +138,15 @@
         }
 
         .vision h2 {
-            font-family: var(--font-handwriting);
-            font-size: 36px;
-            font-weight: 600;
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 400;
             margin-bottom: 32px;
             text-align: center;
         }
 
         .vision-text {
-            font-family: var(--font-body);
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.8;
             color: var(--black);
             margin-bottom: 24px;
@@ -193,9 +160,8 @@
         }
 
         .vision-quote blockquote {
-            font-family: var(--font-handwriting);
-            font-size: 24px;
-            font-weight: 500;
+            font-family: var(--font-serif);
+            font-size: 18px;
             line-height: 1.6;
             color: var(--black);
             margin-bottom: 12px;
@@ -232,8 +198,7 @@
         }
 
         .vision-point p {
-            font-family: var(--font-body);
-            font-size: 13px;
+            font-size: 12px;
             line-height: 1.8;
             color: var(--gray-700);
         }
@@ -245,9 +210,9 @@
         }
 
         .section-title h2 {
-            font-family: var(--font-handwriting);
-            font-size: 32px;
-            font-weight: 600;
+            font-family: var(--font-serif);
+            font-size: 24px;
+            font-weight: 400;
             margin-bottom: 8px;
         }
 
@@ -285,27 +250,13 @@
             transform: translate(-1px, -1px);
         }
 
-        /* Keyboard focus styles for cards */
-        .card:focus,
-        .card:focus-visible {
-            outline: 3px solid var(--black);
-            outline-offset: 2px;
-            box-shadow: 5px 5px 0px var(--black);
-            transform: translate(-1px, -1px);
-        }
-        .card.highlight:focus,
-        .card.highlight:focus-visible {
-            outline: 3px solid var(--white);
-        }
-
         .card-content {
             flex: 1;
         }
 
         .card-date {
-            font-family: var(--font-handwriting);
-            font-size: 16px;
-            font-weight: 500;
+            font-family: var(--font-serif);
+            font-size: 11px;
             color: var(--gray-600);
             margin-bottom: 8px;
         }
@@ -318,8 +269,7 @@
         }
 
         .card-description {
-            font-family: var(--font-body);
-            font-size: 13px;
+            font-size: 12px;
             color: var(--gray-700);
             line-height: 1.6;
         }
@@ -397,9 +347,9 @@
         }
 
         .modal h2 {
-            font-family: var(--font-handwriting);
-            font-size: 36px;
-            font-weight: 600;
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 400;
             margin-bottom: 24px;
             padding-bottom: 16px;
             border-bottom: 1px solid var(--gray-300);
@@ -414,24 +364,21 @@
         }
 
         .modal p {
-            font-family: var(--font-body);
-            font-size: 14px;
+            font-size: 13px;
             color: var(--black);
             line-height: 1.8;
             margin-bottom: 16px;
         }
 
         .modal pre {
-            background: #1a1a1a;
-            color: #e0e0e0;
+            background: var(--gray-900);
+            color: var(--gray-100);
             padding: 20px;
             overflow-x: auto;
             margin: 24px 0;
-            font-family: var(--font-mono);
-            font-size: 12px;
+            font-size: 11px;
             line-height: 1.6;
             border: 1px solid var(--black);
-            white-space: pre;
         }
 
         .modal ul {
@@ -440,8 +387,7 @@
         }
 
         .modal li {
-            font-family: var(--font-body);
-            font-size: 13px;
+            font-size: 12px;
             margin-bottom: 8px;
             line-height: 1.6;
         }
@@ -530,26 +476,8 @@
                 padding: 30px 20px;
             }
 
-            .nav-toggle {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-            }
-
             .nav-links {
                 display: none;
-                flex-direction: column;
-                gap: 16px;
-                background: var(--white);
-                position: absolute;
-                right: 20px;
-                top: 56px;
-                padding: 12px 16px;
-                border: 1px solid var(--gray-300);
-                box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            }
-            .nav-links.open {
-                display: flex;
             }
         }
     </style>
@@ -558,8 +486,7 @@
     <header>
         <nav class="container">
             <a href="/" class="logo">Saorsa Labs</a>
-            <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">☰</button>
-            <ul id="site-nav" class="nav-links">
+            <ul class="nav-links">
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#technology">Technology</a></li>
                 <li><a href="https://github.com/dirvine">GitHub</a></li>
@@ -643,7 +570,7 @@
         </section>
 
         <!-- Technology Section -->
-        <div class="container" id="technology">
+        <div class="container">
             <div class="section-title">
                 <h2>Core Technology Stack</h2>
                 <p>Click to explore technical documentation</p>
@@ -651,7 +578,7 @@
 
             <div class="cards-grid">
                 <!-- Lab Card - FIRST -->
-                <div class="card" role="button" tabindex="0" onclick="openModal('lab')">
+                <div class="card" onclick="openModal('lab')">
                     <div class="card-content">
                         <div class="card-date">Research Facility</div>
                         <div class="card-title">Our Laboratory: 150m² Research Lab</div>
@@ -664,7 +591,7 @@
                 </div>
 
                 <!-- Saorsa Robotics Card - SECOND -->
-                <div class="card highlight" role="button" tabindex="0" onclick="openModal('robotics')">
+                <div class="card highlight" onclick="openModal('robotics')">
                     <div class="card-content">
                         <div class="card-date">Robot Brain</div>
                         <div class="card-title">Saorsa Robotics: Vision-Language-Action Models</div>
@@ -685,7 +612,7 @@
 
             <div class="cards-grid">
                 <!-- Communitas Card -->
-                <div class="card" role="button" tabindex="0" onclick="openModal('communitas')">
+                <div class="card" onclick="openModal('communitas')">
                     <div class="card-content">
                         <div class="card-date">Platform</div>
                         <div class="card-title">Communitas: Decentralized Collaboration</div>
@@ -698,7 +625,7 @@
                 </div>
 
                 <!-- Saorsa PQC Card -->
-                <div class="card" role="button" tabindex="0" onclick="openModal('pqc')">
+                <div class="card" onclick="openModal('pqc')">
                     <div class="card-content">
                         <div class="card-date">Cryptography</div>
                         <div class="card-title">Saorsa PQC: Post-Quantum Security</div>
@@ -711,7 +638,7 @@
                 </div>
 
                 <!-- Four-Word Networking Card -->
-                <div class="card" role="button" tabindex="0" onclick="openModal('fourword')">
+                <div class="card" onclick="openModal('fourword')">
                     <div class="card-content">
                         <div class="card-date">Addressing</div>
                         <div class="card-title">Four-Word Networking: Human-Readable Addresses</div>
@@ -724,7 +651,7 @@
                 </div>
 
                 <!-- ANT-QUIC Card -->
-                <div class="card" role="button" tabindex="0" onclick="openModal('antquic')">
+                <div class="card" onclick="openModal('antquic')">
                     <div class="card-content">
                         <div class="card-date">Network Layer</div>
                         <div class="card-title">ANT-QUIC: Quantum-Secure NAT Traversal</div>
@@ -737,7 +664,7 @@
                 </div>
 
                 <!-- Saorsa Core Card -->
-                <div class="card" role="button" tabindex="0" onclick="openModal('core')">
+                <div class="card" onclick="openModal('core')">
                     <div class="card-content">
                         <div class="card-date">Infrastructure</div>
                         <div class="card-title">Saorsa Core: Multi-Adaptive Neural Network</div>
@@ -750,7 +677,7 @@
                 </div>
 
                 <!-- Saorsa FEC Card -->
-                <div class="card" role="button" tabindex="0" onclick="openModal('fec')">
+                <div class="card" onclick="openModal('fec')">
                     <div class="card-content">
                         <div class="card-date">Storage</div>
                         <div class="card-title">Saorsa FEC: High-Performance Encryption</div>
@@ -763,7 +690,7 @@
                 </div>
 
                 <!-- Saorsa SEAL Card -->
-                <div class="card" role="button" tabindex="0" onclick="openModal('seal')">
+                <div class="card" onclick="openModal('seal')">
                     <div class="card-content">
                         <div class="card-date">Security</div>
                         <div class="card-title">Saorsa SEAL: Threshold Cryptography</div>
@@ -776,7 +703,7 @@
                 </div>
 
                 <!-- Saorsa MLS Card -->
-                <div class="card" role="button" tabindex="0" onclick="openModal('mls')">
+                <div class="card" onclick="openModal('mls')">
                     <div class="card-content">
                         <div class="card-date">Group Messaging</div>
                         <div class="card-title">Saorsa MLS: Quantum-Secure Group Comms</div>
@@ -789,7 +716,7 @@
                 </div>
 
                 <!-- Saorsa RSPS Card -->
-                <div class="card" role="button" tabindex="0" onclick="openModal('rsps')">
+                <div class="card" onclick="openModal('rsps')">
                     <div class="card-content">
                         <div class="card-date">DHT Optimization</div>
                         <div class="card-title">Saorsa RSPS: 1000x DHT Efficiency</div>
@@ -825,10 +752,10 @@
 <!-- Updated Modals Section with Actual README Content -->
 
 <!-- Saorsa Robotics Modal -->
-<div id="robotics-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="robotics-title">
+<div id="robotics-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('robotics')">×</button>
-        <h2 id="robotics-title">🤖 Saorsa Robotics</h2>
+        <h2>🤖 Saorsa Robotics</h2>
         <p class="subtitle">Production-ready Rust framework for autonomous robotic control with local AI models</p>
         
         <div class="stats">
@@ -885,7 +812,8 @@
         </ul>
 
         <h3>Architecture</h3>
-        <pre style="background: #1a1a1a; color: #e0e0e0; padding: 16px; border-radius: 4px; overflow-x: auto; font-family: var(--font-mono); font-size: 12px;">saorsa-robotics/
+        <pre style="background: var(--gray-100); padding: 16px; border-radius: 4px; overflow-x: auto;">
+saorsa-robotics/
 ├── apps/                       # Application binaries
 │   ├── sr-cli/                # Main CLI interface
 │   ├── brain-daemon/          # Central coordination daemon
@@ -918,7 +846,7 @@
         <h4>CAN Transport</h4>
         <p>Hardware control via CAN bus supporting SLCAN protocol, ODrive motor control, T-Motor actuator support, and mock transport for testing.</p>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-robotics" style="color: var(--black);">github.com/dirvine/saorsa-robotics</a><br>
                 <strong>License:</strong> MIT<br>
@@ -929,10 +857,10 @@
 </div>
 
 <!-- Saorsa PQC Modal -->
-<div id="pqc-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="pqc-title">
+<div id="pqc-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('pqc')">×</button>
-        <h2 id="pqc-title">Saorsa Post-Quantum Cryptography Library</h2>
+        <h2>Saorsa Post-Quantum Cryptography Library</h2>
         <p class="subtitle">Comprehensive, production-ready Post-Quantum Cryptography library with NIST FIPS-certified algorithms</p>
         
         <div class="stats">
@@ -1037,7 +965,7 @@
         <h4>SLH-DSA (FIPS 205) - Stateless Hash-Based Signatures</h4>
         <p>12 variants covering all combinations of hash functions (SHA2, SHAKE), security levels (128, 192, 256 bits), and trade-offs (Small signatures vs Fast signing)</p>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-pqc" style="color: var(--black);">github.com/dirvine/saorsa-pqc</a><br>
                 <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-pqc" style="color: var(--black);">crates.io/crates/saorsa-pqc</a><br>
@@ -1048,10 +976,10 @@
 </div>
 
 <!-- Four-Word Networking Modal -->
-<div id="fourword-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="fourword-title">
+<div id="fourword-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('fourword')">×</button>
-        <h2 id="fourword-title">Four-Word Networking: Human-Readable IP Address Encoding</h2>
+        <h2>Four-Word Networking: Human-Readable IP Address Encoding</h2>
         <p class="subtitle">Beyond IP Addresses: Service Addresses for Everyone</p>
         
         <div class="stats">
@@ -1125,7 +1053,7 @@
         <h3>The Four-Word Solution</h3>
         <p>The evolution from three-word to four-word networking represents a crucial balance between human usability and practical dictionary constraints. Four words provide the perfect balance: manageable dictionary size (4,096 words), high-quality memorable words, clear voice communication, and international compatibility.</p>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Repository:</strong> <a href="https://github.com/dirvine/four-word-networking" style="color: var(--black);">github.com/dirvine/four-word-networking</a><br>
                 <strong>Crates.io:</strong> <a href="https://crates.io/crates/four-word-networking" style="color: var(--black);">crates.io/crates/four-word-networking</a><br>
@@ -1136,10 +1064,10 @@
 </div>
 
 <!-- Saorsa SEAL Modal -->
-<div id="seal-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="seal-title">
+<div id="seal-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('seal')">×</button>
-        <h2 id="seal-title">Saorsa SEAL</h2>
+        <h2>Saorsa SEAL</h2>
         <p class="subtitle">Threshold sealing for group data in the Saorsa network</p>
         
         <div class="stats">
@@ -1204,7 +1132,7 @@
             <li>Memory usage: ~2x symbol_size × (data_shares + parity_shares)</li>
         </ul>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-seal" style="color: var(--black);">github.com/dirvine/saorsa-seal</a><br>
                 <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-seal" style="color: var(--black);">crates.io/crates/saorsa-seal</a><br>
@@ -1215,10 +1143,10 @@
 </div>
 
 <!-- Saorsa MLS Modal -->
-<div id="mls-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="mls-title">
+<div id="mls-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('mls')">×</button>
-        <h2 id="mls-title">Saorsa MLS</h2>
+        <h2>Saorsa MLS</h2>
         <p class="subtitle">Message Layer Security (RFC 9420) with post-quantum cryptography for P2P secure group communication</p>
         
         <div class="stats">
@@ -1292,7 +1220,7 @@
         <p><strong>Experimental Implementation</strong> - This crate implements core concepts from RFC 9420 while replacing classical cryptographic primitives with post-quantum alternatives. It provides RFC 9420-compatible protocol flow and semantics, but uses quantum-resistant algorithms instead of traditional elliptic curve cryptography.</p>
         <p><strong>Do not use this crate to protect sensitive data in production systems.</strong></p>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-mls" style="color: var(--black);">github.com/dirvine/saorsa-mls</a><br>
                 <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-mls" style="color: var(--black);">crates.io/crates/saorsa-mls</a><br>
@@ -1303,10 +1231,10 @@
 </div>
 
 <!-- Saorsa RSPS Modal -->
-<div id="rsps-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="rsps-title">
+<div id="rsps-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('rsps')">×</button>
-        <h2 id="rsps-title">Saorsa RSPS</h2>
+        <h2>Saorsa RSPS</h2>
         <p class="subtitle">Root-Scoped Provider Summaries using Golomb Coded Sets for efficient DHT lookups</p>
         
         <div class="stats">
@@ -1382,7 +1310,7 @@
             <li><strong>Network-efficient serialization</strong> - summaries transport in single UDP packets</li>
         </ul>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-rsps" style="color: var(--black);">github.com/dirvine/saorsa-rsps</a><br>
                 <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-rsps" style="color: var(--black);">crates.io/crates/saorsa-rsps</a><br>
@@ -1392,94 +1320,14 @@
     </div>
 </div>
     <script>
-        // Mobile nav toggle
-        (function(){
-            const navToggle = document.getElementById('nav-toggle');
-            const navLinks = document.getElementById('site-nav');
-            if (navToggle && navLinks) {
-                navToggle.addEventListener('click', function() {
-                    const isOpen = navLinks.classList.toggle('open');
-                    navToggle.setAttribute('aria-expanded', String(isOpen));
-                });
-                // Close menu when a link is clicked
-                navLinks.addEventListener('click', function(e) {
-                    const t = e.target;
-                    if (t && t.tagName === 'A') {
-                        navLinks.classList.remove('open');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                    }
-                });
-                // Also close on hash change (e.g., programmatic navigation)
-                window.addEventListener('hashchange', function() {
-                    if (navLinks.classList.contains('open')) {
-                        navLinks.classList.remove('open');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            }
-        })();
-
-        // Modal focus management
-        let lastActiveElement = null;
-
-        function getFocusable(container) {
-            const selectors = [
-                'a[href]', 'area[href]', 'input:not([disabled]):not([type="hidden"])',
-                'select:not([disabled])', 'textarea:not([disabled])', 'button:not([disabled])',
-                '[tabindex]:not([tabindex="-1"])'
-            ];
-            return Array.from(container.querySelectorAll(selectors.join(',')))
-                .filter(el => el.offsetParent !== null);
-        }
-
-        function trapFocus(modal) {
-            const focusable = getFocusable(modal);
-            if (focusable.length) {
-                focusable[0].focus();
-            }
-            function handleTab(e) {
-                if (e.key !== 'Tab') return;
-                const items = getFocusable(modal);
-                if (!items.length) return;
-                const first = items[0];
-                const last = items[items.length - 1];
-                if (e.shiftKey && document.activeElement === first) {
-                    e.preventDefault();
-                    last.focus();
-                } else if (!e.shiftKey && document.activeElement === last) {
-                    e.preventDefault();
-                    first.focus();
-                }
-            }
-            modal._trapHandler = handleTab;
-            modal.addEventListener('keydown', handleTab);
-        }
-
-        function releaseFocus(modal) {
-            if (modal && modal._trapHandler) {
-                modal.removeEventListener('keydown', modal._trapHandler);
-                delete modal._trapHandler;
-            }
-        }
-
         function openModal(id) {
-            const modal = document.getElementById(id + '-modal');
-            if (!modal) return;
-            lastActiveElement = document.activeElement;
-            modal.style.display = 'block';
+            document.getElementById(id + '-modal').style.display = 'block';
             document.body.style.overflow = 'hidden';
-            trapFocus(modal);
         }
 
         function closeModal(id) {
-            const modal = document.getElementById(id + '-modal');
-            if (!modal) return;
-            releaseFocus(modal);
-            modal.style.display = 'none';
+            document.getElementById(id + '-modal').style.display = 'none';
             document.body.style.overflow = 'auto';
-            if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
-                lastActiveElement.focus();
-            }
         }
 
         // Close modal when clicking outside
@@ -1487,45 +1335,16 @@
             const modals = document.querySelectorAll('.modal');
             modals.forEach(modal => {
                 if (event.target === modal) {
-                    const id = modal.id.replace(/-modal$/, '');
-                    closeModal(id);
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
                 }
             });
         });
-
-        // Keyboard: open cards with Enter/Space
-        document.addEventListener('keydown', function(event) {
-            const active = document.activeElement;
-            if (active && active.classList && active.classList.contains('card')) {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    // Extract target from onclick attribute if present
-                    const onclick = active.getAttribute('onclick');
-                    const match = onclick && onclick.match(/openModal\('([^']+)'\)/);
-                    if (match) {
-                        event.preventDefault();
-                        openModal(match[1]);
-                    }
-                }
-            }
-        });
-
-        // Keyboard: Esc to close any open modal (topmost)
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const openModals = Array.from(document.querySelectorAll('.modal'))
-                    .filter(m => getComputedStyle(m).display === 'block');
-                if (openModals.length > 0) {
-                    const top = openModals[openModals.length - 1];
-                    const id = top.id.replace(/-modal$/, '');
-                    closeModal(id);
-                }
-            }
-        });
     </script>
-<div id="antquic-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="antquic-title">
+<div id="antquic-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('antquic')">×</button>
-        <h2 id="antquic-title">ANT-QUIC: Native NAT Traversal Networking</h2>
+        <h2>ANT-QUIC: Native NAT Traversal Networking</h2>
         <p class="subtitle">Automatic NAT Traversal with Quantum-Secure Unmodified IETF QUIC</p>
         
         <div class="stats">
@@ -1586,7 +1405,7 @@
             <li><strong>Distributed Systems</strong>: Build truly decentralized networks</li>
         </ul>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Repository:</strong> <a href="https://github.com/dirvine/ant-quic" style="color: var(--black);">github.com/dirvine/ant-quic</a><br>
                 <strong>Crates.io:</strong> <a href="https://crates.io/crates/ant-quic" style="color: var(--black);">crates.io/crates/ant-quic</a><br>
@@ -1597,10 +1416,10 @@
 </div>
 
 <!-- Saorsa Core Modal -->
-<div id="core-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="core-title">
+<div id="core-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('core')">×</button>
-        <h2 id="core-title">Saorsa Core: Multi-Adaptive Neural Network</h2>
+        <h2>Saorsa Core: Multi-Adaptive Neural Network</h2>
         <p class="subtitle">Comprehensive foundation for decentralized networks with trust-weighted routing</p>
         
         <div class="stats">
@@ -1657,7 +1476,8 @@
         </ul>
 
         <h3>Architecture</h3>
-        <pre style="background: #1a1a1a; color: #e0e0e0; padding: 16px; border-radius: 4px; overflow-x: auto; font-family: var(--font-mono); font-size: 12px;">saorsa-core/
+        <pre style="background: var(--gray-100); padding: 16px; border-radius: 4px; overflow-x: auto;">
+saorsa-core/
 ├── dht/              # Distributed Hash Table
 ├── routing/          # Trust-weighted routing
 ├── addressing/       # Four-word system
@@ -1674,7 +1494,7 @@
             <li><strong>Network Resilience</strong>: Survives 33% Byzantine nodes</li>
         </ul>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-core" style="color: var(--black);">github.com/dirvine/saorsa-core</a><br>
                 <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-core" style="color: var(--black);">crates.io/crates/saorsa-core</a><br>
@@ -1685,10 +1505,10 @@
 </div>
 
 <!-- Communitas Modal -->
-<div id="communitas-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="communitas-title">
+<div id="communitas-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('communitas')">×</button>
-        <h2 id="communitas-title">Communitas - Decentralized P2P Collaboration Platform</h2>
+        <h2>Communitas - Decentralized P2P Collaboration Platform</h2>
         <p class="subtitle">Empowering Private, Decentralised Collaboration</p>
         
         <div class="stats">
@@ -1757,7 +1577,7 @@
             <li><strong>Communication</strong>: QUIC transport with PQC channel binding</li>
         </ul>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Repository:</strong> <a href="https://github.com/dirvine/communitas" style="color: var(--black);">github.com/dirvine/communitas</a><br>
                 <strong>Status:</strong> Active Development<br>
@@ -1768,10 +1588,10 @@
 </div>
 
 <!-- Saorsa FEC Modal -->
-<div id="fec-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="fec-title">
+<div id="fec-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('fec')">×</button>
-        <h2 id="fec-title">Saorsa FEC — Storage, Encryption & FEC</h2>
+        <h2>Saorsa FEC — Storage, Encryption & FEC</h2>
         <p class="subtitle">Comprehensive Forward Error Correction with AES-256-GCM authenticated encryption</p>
         
         <div class="stats">
@@ -1850,7 +1670,7 @@
 
         <h3>Shard Format</h3>
         <p>Each shard uses a compact 96-byte header:</p>
-        <pre style="background: #1a1a1a; color: #e0e0e0; padding: 16px; border-radius: 4px; overflow-x: auto; font-family: var(--font-mono); font-size: 12px;">
+        <pre style="background: var(--gray-100); padding: 16px; border-radius: 4px; overflow-x: auto;">
 version (u8)          = 3
 file_id (32B)         = Unique file identifier  
 chunk_index (u32)     = Index of chunk within file
@@ -1878,7 +1698,7 @@ mac (16B)             = AES-GCM tag</pre>
             <li>Pure Rust: No C dependencies required</li>
         </ul>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Repository:</strong> <a href="https://github.com/dirvine/saorsa-fec" style="color: var(--black);">github.com/dirvine/saorsa-fec</a><br>
                 <strong>Crates.io:</strong> <a href="https://crates.io/crates/saorsa-fec" style="color: var(--black);">crates.io/crates/saorsa-fec</a><br>
@@ -1889,10 +1709,10 @@ mac (16B)             = AES-GCM tag</pre>
 </div>
 
 <!-- Lab Modal -->
-<div id="lab-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="lab-title">
+<div id="lab-modal" class="modal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal('lab')">×</button>
-        <h2 id="lab-title">Our Laboratory</h2>
+        <h2>Our Laboratory</h2>
         <p class="subtitle">150m² Research Lab in Barr, Scotland</p>
         
         <div class="stats">
@@ -1937,64 +1757,24 @@ mac (16B)             = AES-GCM tag</pre>
             <li>Continuous learning algorithms</li>
         </ul>
 
-        <h3>Lab Gallery</h3>
-        
-        <div style="margin: 20px 0; text-align: center;">
-            <img loading="lazy" src="images/WhatsApp Image 2025-09-02 at 15.10.07 (4).jpeg" alt="Saorsa Labs AI & Robotics sign" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 20px;">
-            <p style="font-style: italic; color: var(--gray-600); margin-bottom: 30px;">Saorsa Labs AI & Robotics - Our mission statement in metal</p>
-        </div>
-
-        <div style="margin: 20px 0; text-align: center;">
-            <img loading="lazy" src="images/WhatsApp Image 2025-09-02 at 15.10.07 (3).jpeg" alt="Main lab workspace" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 20px;">
-            <p style="font-style: italic; color: var(--gray-600); margin-bottom: 30px;">Main workspace with 3D printers and electronics bench</p>
-        </div>
-
-        <div style="margin: 20px 0; text-align: center;">
-            <img loading="lazy" src="images/WhatsApp Image 2025-09-02 at 15.10.07 (2).jpeg" alt="Lab workspace and storage" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 20px;">
-            <p style="font-style: italic; color: var(--gray-600); margin-bottom: 30px;">Development area with organized component storage</p>
-        </div>
-
-        <div style="margin: 20px 0; text-align: center;">
-            <img loading="lazy" src="images/WhatsApp Image 2025-09-02 at 15.10.07 (1).jpeg" alt="3D printers" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 20px;">
-            <p style="font-style: italic; color: var(--gray-600); margin-bottom: 30px;">Professional 3D printing stations for rapid prototyping</p>
-        </div>
-
-        <h3>Robot Development</h3>
-        
-        <div style="margin: 20px 0; text-align: center;">
-            <img loading="lazy" src="images/WhatsApp Image 2025-09-02 at 15.10.07.jpeg" alt="Robot gripper development" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 20px;">
-            <p style="font-style: italic; color: var(--gray-600); margin-bottom: 30px;">Custom robot gripper under development</p>
-        </div>
-
-        <div style="margin: 20px 0; text-align: center;">
-            <img loading="lazy" src="images/WhatsApp Image 2025-09-02 at 15.10.07 (5).jpeg" alt="Robotic arm mechanism" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 20px;">
-            <p style="font-style: italic; color: var(--gray-600); margin-bottom: 30px;">Articulated robot arm with custom actuators</p>
-        </div>
-
-        <div style="margin: 20px 0; text-align: center;">
-            <img loading="lazy" src="images/WhatsApp Image 2025-09-02 at 15.10.07 (7).jpeg" alt="3D printed robot components" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 20px;">
-            <p style="font-style: italic; color: var(--gray-600); margin-bottom: 30px;">3D printed robot joints and structural components</p>
-        </div>
-
-        <h3>Active Research - Voice Control Demo</h3>
-        <p>Watch Ben control robot arms in our lab:</p>
-        <div style="margin: 20px 0; text-align: center;">
-            <video controls preload="metadata" style="width: 100%; max-width: 600px; border-radius: 8px;">
+        <h3>Robot Arm Development</h3>
+        <p>Watch Ben control robot arms with voice commands in our lab:</p>
+        <div style="margin: 20px 0;">
+            <video controls style="width: 100%; max-width: 600px; border-radius: 8px;">
                 <source src="arms.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <p style="font-style: italic; color: var(--gray-600); margin-top: 10px;">Voice-controlled robot arm demonstration</p>
         </div>
 
-        <div style="margin: 20px 0; text-align: center;">
-            <img loading="lazy" src="8A4231CC-0F2C-49B1-B2F2-6F3B05CE3C10_1_105_c.jpeg" alt="Robot arm hardware testing" style="width: 100%; max-width: 600px; border-radius: 8px;">
-            <p style="font-style: italic; color: var(--gray-600); margin-top: 10px;">Hardware integration and testing setup</p>
+        <h3>Hardware Testing</h3>
+        <div style="margin: 20px 0;">
+            <img src="8A4231CC-0F2C-49B1-B2F2-6F3B05CE3C10_1_105_c.jpeg" alt="Robot arm hardware testing" style="width: 100%; max-width: 600px; border-radius: 8px;">
         </div>
 
         <h3>Philosophy</h3>
         <p>Our lab embodies our vision of decentralized, owner-controlled robotics. Everything we build here is designed to work without cloud dependencies, without corporate control, and with complete sovereignty for the owner. We believe the future of robotics should be in the hands of individuals and communities, not corporations.</p>
 
-        <div style="margin-top: 32px; padding: 16px; background: #f5f5f5; border-radius: 4px;">
+        <div style="margin-top: 32px; padding: 16px; background: var(--gray-100); border-radius: 4px;">
             <p style="margin: 0; font-size: 12px;">
                 <strong>Location:</strong> Barr, South Ayrshire, Scotland KA26 9TW<br>
                 <strong>Facility:</strong> 150m² converted stable block<br>
